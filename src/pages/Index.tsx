@@ -86,34 +86,34 @@ const Index = () => {
     <div className="min-h-screen" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b border-border/50 z-50 shadow-sm">
-        <div className="container mx-auto px-6 py-5">
+        <div className="container mx-auto px-4 md:px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl md:text-3xl font-display font-bold bg-gradient-warm bg-clip-text text-transparent">
+            <h1 className="text-xl md:text-2xl font-display font-bold bg-gradient-warm bg-clip-text text-transparent">
               {language === 'en' ? 'Design Studio' : 'ديزاين ستوديو'}
             </h1>
-            <div className="flex items-center gap-6">
-              <div className="hidden md:flex gap-8">
+            <div className="flex items-center gap-4 md:gap-6">
+              <div className="hidden md:flex gap-6">
                 <button 
                   onClick={() => scrollToSection('about')} 
-                  className="font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
                 >
                   {language === 'en' ? 'About' : 'عني'}
                 </button>
                 <button 
                   onClick={() => scrollToSection('portfolio')} 
-                  className="font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
                 >
                   {language === 'en' ? 'Portfolio' : 'أعمالي'}
                 </button>
                 <button 
                   onClick={() => scrollToSection('services')} 
-                  className="font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
                 >
                   {language === 'en' ? 'Services' : 'خدماتي'}
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')} 
-                  className="font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
                 >
                   {language === 'en' ? 'Contact' : 'تواصل'}
                 </button>
@@ -130,8 +130,8 @@ const Index = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background"></div>
-        <div className="relative z-10 text-center px-6 py-20 animate-fade-in">
-          <h2 className="text-6xl md:text-8xl font-display font-bold mb-8 leading-tight">
+        <div className="relative z-10 text-center px-4 md:px-6 py-20 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
             {language === 'en' ? (
               <span className="bg-gradient-hero bg-clip-text text-transparent">
                 Crafting Visual Stories
@@ -142,7 +142,7 @@ const Index = () => {
               </span>
             )}
           </h2>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
             {language === 'en' 
               ? 'Graphic designer passionate about creating meaningful designs that tell your unique story'
               : 'مصمم جرافيك شغوف بإنشاء تصاميم ذات معنى تروي قصتك الفريدة'
@@ -152,7 +152,7 @@ const Index = () => {
             variant="hero" 
             size="lg"
             onClick={() => scrollToSection('portfolio')}
-            className="text-lg px-10 py-7 rounded-xl animate-float"
+            className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-xl animate-float shadow-glow"
           >
             {language === 'en' ? 'View My Work' : 'شاهد أعمالي'}
           </Button>
@@ -160,16 +160,16 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32 px-6 bg-gradient-subtle">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16 animate-fade-in">
-            <h3 className="text-5xl md:text-6xl font-display font-bold mb-6">
+      <section id="about" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-subtle">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? 'About Me' : 'من أنا'}
             </h3>
-            <div className="w-32 h-1.5 bg-gradient-warm mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full"></div>
           </div>
-          <Card className="p-10 md:p-16 shadow-medium hover:shadow-glow transition-all duration-500 animate-scale-in border-0 bg-card/50 backdrop-blur">
-            <p className="text-xl md:text-2xl leading-relaxed text-center font-light">
+          <Card className="p-6 md:p-10 shadow-medium hover:shadow-glow transition-all duration-500 animate-scale-in border-0 bg-card/50 backdrop-blur">
+            <p className="text-base md:text-lg leading-relaxed text-center">
               {language === 'en' 
                 ? "I'm a passionate graphic designer who believes that every brand has a unique story to tell. With creativity and attention to detail, I transform ideas into visual experiences that resonate with audiences and leave lasting impressions."
                 : "أنا مصمم جرافيك شغوف أؤمن بأن كل علامة تجارية لديها قصة فريدة لترويها. بالإبداع والاهتمام بالتفاصيل، أحول الأفكار إلى تجارب بصرية تلامس الجمهور وتترك انطباعات دائمة."
@@ -180,21 +180,21 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-32 px-6">
+      <section id="portfolio" className="py-16 md:py-24 px-4 md:px-6">
         <div className="container mx-auto">
-          <div className="text-center mb-20 animate-fade-in">
-            <h3 className="text-5xl md:text-6xl font-display font-bold mb-6">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? 'Portfolio' : 'معرض الأعمال'}
             </h3>
-            <div className="w-32 h-1.5 bg-gradient-warm mx-auto rounded-full mb-6"></div>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-4"></div>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {language === 'en' 
                 ? 'Selected works showcasing creativity and passion'
                 : 'أعمال مختارة تعرض الإبداع والشغف'
               }
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <Card 
                 key={index} 
@@ -207,17 +207,17 @@ const Index = () => {
                     alt={language === 'en' ? project.title : project.titleAr}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/95 via-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                    <h4 className="text-background font-bold text-xl mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/95 via-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 md:p-6">
+                    <h4 className="text-background font-bold text-lg md:text-xl mb-1">
                       {language === 'en' ? project.title : project.titleAr}
                     </h4>
-                    <p className="text-background/90">
+                    <p className="text-background/90 text-sm">
                       {language === 'en' ? project.description : project.descriptionAr}
                     </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h4 className="font-semibold text-lg">
+                <div className="p-4 md:p-5">
+                  <h4 className="font-semibold text-base md:text-lg">
                     {language === 'en' ? project.title : project.titleAr}
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -231,34 +231,34 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 px-6 bg-gradient-subtle">
+      <section id="services" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-subtle">
         <div className="container mx-auto">
-          <div className="text-center mb-20 animate-fade-in">
-            <h3 className="text-5xl md:text-6xl font-display font-bold mb-6">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? 'Services' : 'الخدمات'}
             </h3>
-            <div className="w-32 h-1.5 bg-gradient-warm mx-auto rounded-full mb-6"></div>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-4"></div>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {language === 'en'
                 ? 'Professional design solutions tailored to your needs'
                 : 'حلول تصميم احترافية مصممة خصيصًا لاحتياجاتك'
               }
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="p-10 text-center shadow-medium hover:shadow-glow transition-all hover:-translate-y-3 duration-500 animate-scale-in border-0 bg-card/50 backdrop-blur"
+                className="p-6 md:p-8 text-center shadow-medium hover:shadow-glow transition-all hover:-translate-y-2 duration-500 animate-scale-in border-0 bg-card/50 backdrop-blur"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-20 h-20 bg-gradient-warm rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-soft">
-                  <service.icon className="w-10 h-10 text-primary-foreground" />
+                <div className="w-16 h-16 md:w-18 md:h-18 bg-gradient-warm rounded-xl flex items-center justify-center mx-auto mb-6 shadow-soft">
+                  <service.icon className="w-8 h-8 md:w-9 md:h-9 text-primary-foreground" />
                 </div>
-                <h4 className="font-bold text-xl mb-4">
+                <h4 className="font-bold text-lg md:text-xl mb-3">
                   {language === 'en' ? service.title : service.titleAr}
                 </h4>
-                <p className="text-base leading-relaxed text-muted-foreground">
+                <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
                   {language === 'en' ? service.description : service.descriptionAr}
                 </p>
               </Card>
@@ -268,26 +268,26 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 px-6">
-        <div className="container mx-auto max-w-5xl text-center">
+      <section id="contact" className="py-16 md:py-24 px-4 md:px-6">
+        <div className="container mx-auto max-w-4xl text-center">
           <div className="animate-fade-in">
-            <h3 className="text-5xl md:text-6xl font-display font-bold mb-6">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? "Let's Create Together" : 'لنبدع معًا'}
             </h3>
-            <div className="w-32 h-1.5 bg-gradient-warm mx-auto rounded-full mb-8"></div>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-16">
+            <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-6"></div>
+            <p className="text-base md:text-lg text-muted-foreground mb-10 md:mb-12">
               {language === 'en' 
                 ? "Ready to bring your vision to life? Let's talk!"
                 : 'مستعد لتحقيق رؤيتك؟ لنتحدث!'
               }
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button variant="hero" size="lg" className="gap-3 text-lg px-8 py-7 rounded-xl">
-                <Mail className="w-5 h-5" />
-                designer@email.com
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
+              <Button variant="hero" size="lg" className="gap-2 text-base px-6 py-6 rounded-xl w-full sm:w-auto">
+                <Mail className="w-4 h-4" />
+                <span className="truncate">designer@email.com</span>
               </Button>
-              <Button variant="outline" size="lg" className="gap-3 text-lg px-8 py-7 rounded-xl border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary">
-                <Phone className="w-5 h-5" />
+              <Button variant="outline" size="lg" className="gap-2 text-base px-6 py-6 rounded-xl border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary w-full sm:w-auto">
+                <Phone className="w-4 h-4" />
                 {language === 'en' ? 'WhatsApp' : 'واتساب'}
               </Button>
             </div>
@@ -296,9 +296,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-border/50 bg-gradient-subtle">
+      <footer className="py-8 md:py-10 px-4 md:px-6 border-t border-border/50 bg-gradient-subtle">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p className="text-base">
+          <p className="text-sm md:text-base">
             {language === 'en' 
               ? '© 2024 Design Studio. All rights reserved.'
               : '© 2024 ديزاين ستوديو. جميع الحقوق محفوظة.'
