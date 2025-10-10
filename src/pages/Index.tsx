@@ -126,36 +126,75 @@ const Index = () => {
 
       {/* Hero Section */}
       <section 
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background"></div>
-        <div className="relative z-10 text-center px-4 md:px-6 py-20 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+        {/* Sophisticated overlay with multiple layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        
+        <div className="relative z-10 text-center px-4 md:px-6 py-20 max-w-5xl mx-auto">
+          {/* Subtitle badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/40 backdrop-blur-md border border-primary/20 mb-8 animate-fade-in">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+            <span className="text-sm font-medium text-foreground/90">
+              {language === 'en' ? 'Independent Design Studio' : 'استوديو تصميم مستقل'}
+            </span>
+          </div>
+
+          {/* Main heading with enhanced typography */}
+          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-8 leading-[1.1] animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {language === 'en' ? (
-              <span className="bg-gradient-hero bg-clip-text text-transparent">
-                Visual Identity Designer
-              </span>
+              <>
+                <span className="block bg-gradient-hero bg-clip-text text-transparent mb-2">
+                  Visual Identity
+                </span>
+                <span className="block text-foreground">
+                  Designer
+                </span>
+              </>
             ) : (
-              <span className="bg-gradient-hero bg-clip-text text-transparent">
-                مصممة هويات بصرية
-              </span>
+              <>
+                <span className="block text-foreground mb-2">
+                  مصمم
+                </span>
+                <span className="block bg-gradient-hero bg-clip-text text-transparent">
+                  هويات بصرية
+                </span>
+              </>
             )}
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+
+          {/* Description with elegant styling */}
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed font-light animate-fade-in" style={{ animationDelay: '0.4s' }}>
             {language === 'en' 
               ? 'Building identities and designs crafted for the Gulf audience'
               : 'تصميم هويات بصرية تتحدث لغة الجمهور الخليجي'
             }
           </p>
-          <Button 
-            variant="hero" 
-            size="lg"
-            onClick={() => scrollToSection('portfolio')}
-            className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-xl animate-float shadow-glow"
-          >
-            {language === 'en' ? 'View My Work' : 'شاهد أعمالي'}
-          </Button>
+
+          {/* CTA Button with enhanced styling */}
+          <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => scrollToSection('portfolio')}
+              className="text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-full shadow-glow hover:shadow-[0_0_60px_hsl(12_88%_65%/0.4)] hover:scale-105 transition-all duration-300 font-semibold"
+            >
+              {language === 'en' ? 'View My Work' : 'شاهد أعمالي'}
+            </Button>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+            <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
+              <div className="w-1.5 h-3 bg-gradient-warm rounded-full"></div>
+            </div>
+          </div>
         </div>
       </section>
 
