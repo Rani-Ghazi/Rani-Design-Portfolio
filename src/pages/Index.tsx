@@ -56,29 +56,29 @@ const Index = () => {
       icon: Palette,
       title: "Brand Identity",
       titleAr: "الهوية التجارية",
-      description: "Creating memorable logos and complete brand systems that tell your story.",
-      descriptionAr: "إنشاء شعارات مميزة وأنظمة علامات تجارية متكاملة تروي قصتك."
+      description: "Complete visual identity systems—from logo to brand guidelines—designed to create recognition and trust.",
+      descriptionAr: "أنظمة هوية بصرية متكاملة من الشعار إلى دليل الهوية، مصممة لبناء الوعي والثقة."
     },
     {
       icon: Instagram,
       title: "Social Media Design",
       titleAr: "تصميم السوشيال ميديا",
-      description: "Eye-catching posts and stories that engage your audience.",
-      descriptionAr: "منشورات وقصص لافتة للنظر تجذب جمهورك."
+      description: "Consistent, engaging visuals that speak to your audience and strengthen your online presence.",
+      descriptionAr: "تصاميم متسقة وجذابة تتحدث مع جمهورك وتعزز حضورك الرقمي."
     },
     {
       icon: Package,
       title: "Packaging Design",
-      titleAr: "تصميم التعبئة والتغليف",
-      description: "Beautiful packaging that makes your products stand out.",
-      descriptionAr: "تغليف جميل يجعل منتجاتك متميزة."
+      titleAr: "تصميم العبوات",
+      description: "Thoughtful packaging design that reflects quality and connects with local market expectations.",
+      descriptionAr: "تصميم عبوات مدروس يعكس الجودة ويتواصل مع توقعات السوق المحلي."
     },
     {
       icon: Sparkles,
       title: "Creative Direction",
-      titleAr: "الإخراج الإبداعي",
-      description: "Strategic visual concepts that bring your vision to life.",
-      descriptionAr: "مفاهيم بصرية استراتيجية تحيي رؤيتك."
+      titleAr: "التوجيه الإبداعي",
+      description: "Strategic visual direction to align your brand message across all touchpoints.",
+      descriptionAr: "توجيه بصري استراتيجي لتوحيد رسالة علامتك عبر جميع نقاط التواصل."
     }
   ];
 
@@ -89,7 +89,7 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-xl md:text-2xl font-display font-bold bg-gradient-warm bg-clip-text text-transparent">
-              {language === 'en' ? 'Design Studio' : 'ديزاين ستوديو'}
+              {language === 'en' ? 'Rani Design Studio' : 'راني ديزاين ستوديو'}
             </h1>
             <div className="flex items-center gap-4 md:gap-6">
               <div className="hidden md:flex gap-6">
@@ -134,18 +134,18 @@ const Index = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
             {language === 'en' ? (
               <span className="bg-gradient-hero bg-clip-text text-transparent">
-                Crafting Visual Stories
+                Visual Identity Designer
               </span>
             ) : (
               <span className="bg-gradient-hero bg-clip-text text-transparent">
-                نصنع قصصًا بصرية
+                مصممة هويات بصرية
               </span>
             )}
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
             {language === 'en' 
-              ? 'Graphic designer passionate about creating meaningful designs that tell your unique story'
-              : 'مصمم جرافيك شغوف بإنشاء تصاميم ذات معنى تروي قصتك الفريدة'
+              ? 'Building identities and designs crafted for the Gulf audience'
+              : 'تصميم هويات بصرية تتحدث لغة الجمهور الخليجي'
             }
           </p>
           <Button 
@@ -171,8 +171,8 @@ const Index = () => {
           <Card className="p-6 md:p-10 shadow-medium hover:shadow-glow transition-all duration-500 animate-scale-in border-0 bg-card/50 backdrop-blur">
             <p className="text-base md:text-lg leading-relaxed text-center">
               {language === 'en' 
-                ? "I'm a passionate graphic designer who believes that every brand has a unique story to tell. With creativity and attention to detail, I transform ideas into visual experiences that resonate with audiences and leave lasting impressions."
-                : "أنا مصمم جرافيك شغوف أؤمن بأن كل علامة تجارية لديها قصة فريدة لترويها. بالإبداع والاهتمام بالتفاصيل، أحول الأفكار إلى تجارب بصرية تلامس الجمهور وتترك انطباعات دائمة."
+                ? "I'm Rani, an independent designer specializing in visual identities tailored for the Omani and Gulf market. My work is rooted in creativity, clarity, and trust—building brands that truly connect."
+                : "أنا راني، مصممة مستقلة متخصصة في بناء الهويات البصرية للسوق العماني والخليجي. أعمل بإبداع ووضوح لتصميم علامات تجارية تُبنى على الثقة وتتواصل بصدق."
               }
             </p>
           </Card>
@@ -189,8 +189,8 @@ const Index = () => {
             <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-4"></div>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {language === 'en' 
-                ? 'Selected works showcasing creativity and passion'
-                : 'أعمال مختارة تعرض الإبداع والشغف'
+                ? 'Selected work in branding, packaging, and social media design'
+                : 'أعمال منتقاة في الهوية البصرية، تصميم العبوات، والسوشيال ميديا'
               }
             </p>
           </div>
@@ -240,8 +240,8 @@ const Index = () => {
             <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-4"></div>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {language === 'en'
-                ? 'Professional design solutions tailored to your needs'
-                : 'حلول تصميم احترافية مصممة خصيصًا لاحتياجاتك'
+                ? 'Clear services built around your brand needs'
+                : 'خدمات واضحة تُبنى حول احتياجات علامتك'
               }
             </p>
           </div>
@@ -272,13 +272,13 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="animate-fade-in">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              {language === 'en' ? "Let's Create Together" : 'لنبدع معًا'}
+              {language === 'en' ? "Let's Work Together" : 'لنبدأ العمل معًا'}
             </h3>
             <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-6"></div>
             <p className="text-base md:text-lg text-muted-foreground mb-10 md:mb-12">
               {language === 'en' 
-                ? "Ready to bring your vision to life? Let's talk!"
-                : 'مستعد لتحقيق رؤيتك؟ لنتحدث!'
+                ? "Have a project in mind? Reach out and let's collaborate."
+                : 'لديك مشروع في ذهنك؟ تواصل معي ولنبدأ.'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
@@ -300,8 +300,8 @@ const Index = () => {
         <div className="container mx-auto text-center text-muted-foreground">
           <p className="text-sm md:text-base">
             {language === 'en' 
-              ? '© 2024 Design Studio. All rights reserved.'
-              : '© 2024 ديزاين ستوديو. جميع الحقوق محفوظة.'
+              ? '© 2025 Rani Design Studio. All rights reserved.'
+              : '© 2025 راني ديزاين ستوديو. جميع الحقوق محفوظة.'
             }
           </p>
         </div>
