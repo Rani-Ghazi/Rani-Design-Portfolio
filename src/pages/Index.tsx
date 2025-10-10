@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, Palette, Package, Sparkles, Instagram } from "lucide-react";
@@ -19,6 +19,26 @@ const Index = () => {
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'ar' : 'en');
   };
+
+  // Scroll animation observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+    );
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const projects = [
     {
@@ -85,35 +105,35 @@ const Index = () => {
   return (
     <div className="min-h-screen" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b border-border/50 z-50 shadow-sm">
+      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg border-b border-border/50 z-50 shadow-sm transition-all duration-300">
         <div className="container mx-auto px-4 md:px-6 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl md:text-2xl font-display font-bold bg-gradient-warm bg-clip-text text-transparent">
+            <h1 className="text-xl md:text-2xl font-display font-bold bg-gradient-warm bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
               {language === 'en' ? 'Rani Design Studio' : 'راني ديزاين ستوديو'}
             </h1>
             <div className="flex items-center gap-4 md:gap-6">
               <div className="hidden md:flex gap-6">
                 <button 
                   onClick={() => scrollToSection('about')} 
-                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-warm after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {language === 'en' ? 'About' : 'عني'}
                 </button>
                 <button 
                   onClick={() => scrollToSection('portfolio')} 
-                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-warm after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {language === 'en' ? 'Portfolio' : 'أعمالي'}
                 </button>
                 <button 
                   onClick={() => scrollToSection('services')} 
-                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-warm after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {language === 'en' ? 'Services' : 'خدماتي'}
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')} 
-                  className="text-sm font-medium hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="text-sm font-medium hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-warm after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {language === 'en' ? 'Contact' : 'تواصل'}
                 </button>
@@ -199,16 +219,16 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-subtle">
+      <section id="about" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-subtle overflow-hidden">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12 animate-fade-in">
+          <div className="text-center mb-12 animate-on-scroll">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? 'About Me' : 'من أنا'}
             </h3>
             <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full"></div>
           </div>
-          <Card className="p-6 md:p-10 shadow-medium hover:shadow-glow transition-all duration-500 animate-scale-in border-0 bg-card/50 backdrop-blur">
-            <p className="text-base md:text-lg leading-relaxed text-center">
+          <Card className="p-6 md:p-10 shadow-medium hover:shadow-glow transition-all duration-700 animate-on-scroll stagger-1 border-0 bg-card/50 backdrop-blur hover:scale-[1.02] group">
+            <p className="text-base md:text-lg leading-relaxed text-center transition-all duration-500 group-hover:text-foreground">
               {language === 'en' 
                 ? "I'm Rani, an independent designer specializing in visual identities tailored for the Omani and Gulf market. My work is rooted in creativity, clarity, and trust—building brands that truly connect."
                 : "أنا راني، مصمم مستقل متخصص في بناء الهويات البصرية للسوق العماني والخليجي. أعمل بإبداع ووضوح لتصميم علامات تجارية تُبنى على الثقة وتتواصل بصدق."
@@ -219,9 +239,9 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-16 md:py-24 px-4 md:px-6">
+      <section id="portfolio" className="py-16 md:py-24 px-4 md:px-6 overflow-hidden">
         <div className="container mx-auto">
-          <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <div className="text-center mb-12 md:mb-16 animate-on-scroll">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? 'Portfolio' : 'معرض الأعمال'}
             </h3>
@@ -237,26 +257,25 @@ const Index = () => {
             {projects.map((project, index) => (
               <Card 
                 key={index} 
-                className="group overflow-hidden shadow-medium hover:shadow-glow transition-all duration-500 cursor-pointer animate-scale-in border-0"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`group overflow-hidden shadow-medium hover:shadow-glow transition-all duration-700 cursor-pointer border-0 animate-on-scroll stagger-${(index % 4) + 1}`}
               >
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-square overflow-hidden bg-muted">
                   <img 
                     src={project.image} 
                     alt={language === 'en' ? project.title : project.titleAr}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transform group-hover:scale-110 group-hover:rotate-2 transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/95 via-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 md:p-6">
-                    <h4 className="text-background font-bold text-lg md:text-xl mb-1">
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/95 via-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-4 md:p-6 translate-y-4 group-hover:translate-y-0">
+                    <h4 className="text-background font-bold text-lg md:text-xl mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
                       {language === 'en' ? project.title : project.titleAr}
                     </h4>
-                    <p className="text-background/90 text-sm">
+                    <p className="text-background/90 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                       {language === 'en' ? project.description : project.descriptionAr}
                     </p>
                   </div>
                 </div>
-                <div className="p-4 md:p-5">
-                  <h4 className="font-semibold text-base md:text-lg">
+                <div className="p-4 md:p-5 group-hover:bg-gradient-warm/5 transition-colors duration-500">
+                  <h4 className="font-semibold text-base md:text-lg transition-colors duration-300 group-hover:text-primary">
                     {language === 'en' ? project.title : project.titleAr}
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -270,9 +289,9 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-subtle">
+      <section id="services" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-subtle overflow-hidden">
         <div className="container mx-auto">
-          <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <div className="text-center mb-12 md:mb-16 animate-on-scroll">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? 'Services' : 'الخدمات'}
             </h3>
@@ -288,16 +307,15 @@ const Index = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="p-6 md:p-8 text-center shadow-medium hover:shadow-glow transition-all hover:-translate-y-2 duration-500 animate-scale-in border-0 bg-card/50 backdrop-blur"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`p-6 md:p-8 text-center shadow-medium hover:shadow-glow transition-all hover:-translate-y-3 duration-700 border-0 bg-card/50 backdrop-blur group cursor-pointer animate-on-scroll stagger-${(index % 4) + 1}`}
               >
-                <div className="w-16 h-16 md:w-18 md:h-18 bg-gradient-warm rounded-xl flex items-center justify-center mx-auto mb-6 shadow-soft">
-                  <service.icon className="w-8 h-8 md:w-9 md:h-9 text-primary-foreground" />
+                <div className="w-16 h-16 md:w-18 md:h-18 bg-gradient-warm rounded-xl flex items-center justify-center mx-auto mb-6 shadow-soft group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 group-hover:animate-glow-pulse">
+                  <service.icon className="w-8 h-8 md:w-9 md:h-9 text-primary-foreground transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h4 className="font-bold text-lg md:text-xl mb-3">
+                <h4 className="font-bold text-lg md:text-xl mb-3 transition-colors duration-300 group-hover:text-primary">
                   {language === 'en' ? service.title : service.titleAr}
                 </h4>
-                <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
+                <p className="text-sm md:text-base leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
                   {language === 'en' ? service.description : service.descriptionAr}
                 </p>
               </Card>
@@ -307,9 +325,10 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-24 px-4 md:px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="animate-fade-in">
+      <section id="contact" className="py-16 md:py-24 px-4 md:px-6 overflow-hidden relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <div className="animate-on-scroll">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
               {language === 'en' ? "Let's Work Together" : 'لنبدأ العمل معًا'}
             </h3>
@@ -320,26 +339,26 @@ const Index = () => {
                 : 'لديك مشروع في ذهنك؟ تواصل معي ولنبدأ.'
               }
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center max-w-2xl mx-auto animate-on-scroll stagger-1">
               <Button 
                 variant="hero" 
                 size="lg" 
-                className="gap-2 text-base px-6 py-6 rounded-xl w-full sm:w-auto"
+                className="gap-2 text-base px-6 py-6 rounded-xl w-full sm:w-auto shadow-glow hover:shadow-[0_0_60px_hsl(12_88%_65%/0.5)] hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="mailto:developerrani98@gmail.com">
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4 transition-transform duration-300 group-hover:rotate-12" />
                   <span className="truncate">developerrani98@gmail.com</span>
                 </a>
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="gap-2 text-base px-6 py-6 rounded-xl border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary w-full sm:w-auto"
+                className="gap-2 text-base px-6 py-6 rounded-xl border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-105 w-full sm:w-auto transition-all duration-300"
                 asChild
               >
                 <a href="https://wa.me/96895454284" target="_blank" rel="noopener noreferrer">
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4 transition-transform duration-300 group-hover:rotate-12" />
                   {language === 'en' ? 'WhatsApp' : 'واتساب'}
                 </a>
               </Button>
@@ -350,8 +369,8 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="py-8 md:py-10 px-4 md:px-6 border-t border-border/50 bg-gradient-subtle">
-        <div className="container mx-auto text-center text-muted-foreground">
-          <p className="text-sm md:text-base">
+        <div className="container mx-auto text-center text-muted-foreground animate-fade-in">
+          <p className="text-sm md:text-base hover:text-foreground transition-colors duration-300">
             {language === 'en' 
               ? '© 2025 Rani Design Studio. All rights reserved.'
               : '© 2025 راني ديزاين ستوديو. جميع الحقوق محفوظة.'
