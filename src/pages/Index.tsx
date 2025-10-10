@@ -172,7 +172,7 @@ const Index = () => {
             <p className="text-base md:text-lg leading-relaxed text-center">
               {language === 'en' 
                 ? "I'm Rani, an independent designer specializing in visual identities tailored for the Omani and Gulf market. My work is rooted in creativity, clarity, and trust—building brands that truly connect."
-                : "أنا راني، مصممة مستقلة متخصصة في بناء الهويات البصرية للسوق العماني والخليجي. أعمل بإبداع ووضوح لتصميم علامات تجارية تُبنى على الثقة وتتواصل بصدق."
+                : "أنا راني، مصمم مستقل متخصص في بناء الهويات البصرية للسوق العماني والخليجي. أعمل بإبداع ووضوح لتصميم علامات تجارية تُبنى على الثقة وتتواصل بصدق."
               }
             </p>
           </Card>
@@ -282,13 +282,27 @@ const Index = () => {
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
-              <Button variant="hero" size="lg" className="gap-2 text-base px-6 py-6 rounded-xl w-full sm:w-auto">
-                <Mail className="w-4 h-4" />
-                <span className="truncate">designer@email.com</span>
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="gap-2 text-base px-6 py-6 rounded-xl w-full sm:w-auto"
+                asChild
+              >
+                <a href="mailto:developerrani98@gmail.com">
+                  <Mail className="w-4 h-4" />
+                  <span className="truncate">developerrani98@gmail.com</span>
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="gap-2 text-base px-6 py-6 rounded-xl border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary w-full sm:w-auto">
-                <Phone className="w-4 h-4" />
-                {language === 'en' ? 'WhatsApp' : 'واتساب'}
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="gap-2 text-base px-6 py-6 rounded-xl border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary w-full sm:w-auto"
+                asChild
+              >
+                <a href="https://wa.me/96895454284" target="_blank" rel="noopener noreferrer">
+                  <Phone className="w-4 h-4" />
+                  {language === 'en' ? 'WhatsApp' : 'واتساب'}
+                </a>
               </Button>
             </div>
           </div>
