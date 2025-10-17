@@ -8,6 +8,7 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'ar'>('en');
@@ -220,9 +221,29 @@ const Index = () => {
 
       {/* About Section - Moved Higher */}
       <section id="about" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-subtle overflow-hidden">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="animate-on-scroll">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-[1fr,1.2fr] gap-8 md:gap-16 items-center">
+            {/* Photo Column */}
+            <div className="animate-on-scroll order-2 md:order-1">
+              <div className="relative max-w-md mx-auto">
+                {/* Decorative background */}
+                <div className="absolute inset-0 bg-gradient-warm rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div>
+                
+                {/* Image container */}
+                <div className="relative rounded-3xl overflow-hidden shadow-glow border-4 border-background group">
+                  <img 
+                    src={raniPortrait} 
+                    alt={language === 'en' ? 'Rani - Visual Identity Designer' : 'راني - مصمم هويات بصرية'}
+                    className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Overlay gradient on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Text Column */}
+            <div className="animate-on-scroll stagger-1 order-1 md:order-2">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
                 <span className="text-sm font-medium text-primary">
                   {language === 'en' ? 'Independent Designer' : 'مصمم مستقل'}
@@ -243,43 +264,50 @@ const Index = () => {
                   : "سواء كنت تطلق مشروعًا جديدًا أو تجدد علامة قائمة، أقدم وضوحًا وثقة وتأثيرًا بصريًا—مصمم خصيصًا للجمهور الخليجي."
                 }
               </p>
-              <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                  <span>{language === 'en' ? 'Gulf Startups' : 'الشركات الناشئة الخليجية'}</span>
+              
+              {/* Credibility badges */}
+              <div className="space-y-4 mb-8">
+                <Card className="p-4 border-0 bg-background/50 backdrop-blur shadow-soft hover:shadow-medium transition-all duration-300">
+                  <h4 className="font-bold text-base mb-2 text-primary">{language === 'en' ? 'Trusted By' : 'موثوق من'}</h4>
+                  <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                      <span>{language === 'en' ? 'Gulf Startups' : 'الشركات الناشئة الخليجية'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                      <span>{language === 'en' ? 'Local Retailers' : 'تجار التجزئة المحليون'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                      <span>{language === 'en' ? 'Service Providers' : 'مقدمو الخدمات'}</span>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+
+              {/* Approach highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <h4 className="font-bold text-base text-primary">{language === 'en' ? 'My Approach' : 'منهجي'}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {language === 'en'
+                      ? 'Market research, cultural insight, visual excellence.'
+                      : 'بحث السوق، فهم ثقافي، تميز بصري.'
+                    }
+                  </p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                  <span>{language === 'en' ? 'Local Retailers' : 'تجار التجزئة المحليون'}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                  <span>{language === 'en' ? 'Service Providers' : 'مقدمو الخدمات'}</span>
+                <div className="space-y-2">
+                  <h4 className="font-bold text-base text-primary">{language === 'en' ? 'Why Gulf-Focused?' : 'لماذا التركيز الخليجي؟'}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {language === 'en'
+                      ? 'Because our market deserves designs that truly connect.'
+                      : 'لأن سوقنا يستحق تصاميم تتواصل بصدق.'
+                    }
+                  </p>
                 </div>
               </div>
             </div>
-            <Card className="p-8 md:p-10 shadow-medium hover:shadow-glow transition-all duration-700 animate-on-scroll stagger-1 border-0 bg-card/50 backdrop-blur hover:scale-[1.02] group">
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-bold text-lg mb-2 text-primary">{language === 'en' ? 'My Approach' : 'منهجي'}</h4>
-                  <p className="text-muted-foreground">
-                    {language === 'en'
-                      ? 'Every project begins with understanding your market, audience, and vision—then translating that into design that delivers results.'
-                      : 'كل مشروع يبدأ بفهم سوقك وجمهورك ورؤيتك—ثم ترجمة ذلك إلى تصميم يحقق نتائج.'
-                    }
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-2 text-primary">{language === 'en' ? 'Why Gulf-Focused?' : 'لماذا التركيز الخليجي؟'}</h4>
-                  <p className="text-muted-foreground">
-                    {language === 'en'
-                      ? 'Because design that works here requires cultural insight, not just technical skill. I know what resonates with our audiences.'
-                      : 'لأن التصميم الناجح هنا يتطلب فهمًا ثقافيًا، وليس فقط مهارة تقنية. أعرف ما يلامس جمهورنا.'
-                    }
-                  </p>
-                </div>
-              </div>
-            </Card>
           </div>
         </div>
       </section>
