@@ -75,31 +75,45 @@ const Index = () => {
   const services = [
     {
       icon: Palette,
-      title: "Brand Identity Design",
-      titleAr: "تصميم الهوية التجارية",
-      description: "From logo to full brand guidelines—create instant recognition and lasting trust. Your brand, built to stand out in the Gulf market.",
-      descriptionAr: "من الشعار إلى دليل الهوية الكامل—بناء تميز فوري وثقة دائمة. علامتك، مصممة للتميز في السوق الخليجي."
+      title: "Complete Brand Identity",
+      titleAr: "الهوية البصرية الشاملة",
+      description: "From logo to full brand guidelines—create instant recognition and lasting trust. Your brand, built to lead in the Gulf market.",
+      descriptionAr: "من الشعار إلى الدليل الكامل—تميز فوري وثقة دائمة. علامتك، مهيأة للريادة في السوق الخليجي."
     },
     {
       icon: Instagram,
       title: "Social Media Design",
-      titleAr: "تصميم السوشيال ميديا",
-      description: "Stop scrolling, start connecting. Visuals that capture attention, speak your brand language, and drive real engagement.",
-      descriptionAr: "أوقف التمرير، ابدأ التواصل. تصاميم تلفت الانتباه، تتحدث بلغة علامتك، وتحقق تفاعلًا حقيقيًا."
+      titleAr: "تصميم محتوى التواصل الاجتماعي",
+      description: "Stop scrolling, start connecting. Designs that capture eyes, speak your brand language, and drive real engagement.",
+      descriptionAr: "أوقف التمرير، ابدأ التواصل. تصاميم تلفت الأنظار، تتحدث بلسان علامتك، وتقود إلى تفاعل حقيقي."
     },
     {
       icon: Package,
-      title: "Packaging Design",
-      titleAr: "تصميم العبوات",
-      description: "Packaging that sells before it's opened—premium, shelf-ready designs that reflect your product's quality and your market's expectations.",
-      descriptionAr: "تغليف يبيع قبل أن يُفتح—تصاميم راقية جاهزة للأرفف تعكس جودة منتجك وتوقعات سوقك."
+      title: "Premium Packaging",
+      titleAr: "تصميم العبوات والتغليف الفاخر",
+      description: "Your product's first impression is your first sale opportunity. Premium, shelf-ready designs that reflect quality and meet market taste.",
+      descriptionAr: "واجهة منتجك هي فرصتك الأولى للبيع. تصاميم راقية وجاهزة للأرفف تعكس جودة منتجك وتفهم ذوق جمهورك."
     },
     {
       icon: Sparkles,
-      title: "Creative Direction",
-      titleAr: "التوجيه الإبداعي",
-      description: "One vision, every touchpoint. Strategic direction that unifies your brand message and amplifies your impact across all platforms.",
-      descriptionAr: "رؤية واحدة، في كل نقطة تواصل. توجيه استراتيجي يوحد رسالة علامتك ويضخم تأثيرك عبر جميع المنصات."
+      title: "Product Retouching",
+      titleAr: "تحسين وعرض المنتجات",
+      description: "Transform ordinary products into premium presentations. Professional retouching for e-commerce, retail, and marketing—making modest quality look luxurious.",
+      descriptionAr: "نحول منتجاتك العادية إلى منتجات فاخرة. تحسين احترافي للصور (حتى المتواضعة) لتظهر في أفضل شكل مرتب وفاخر."
+    },
+    {
+      icon: Palette,
+      title: "Print & Marketing Materials",
+      titleAr: "حلول المطبوعات والتسويق المادي",
+      description: "Make your brand tangible. Creative stickers, business cards, flyers—everything you need for physical presence with unmatched print quality.",
+      descriptionAr: "لنجعل علامتك ملموسة. من الاستيكرات الإبداعية إلى المطبوعات الاحترافية (بطاقات عمل، فلايرات) بجودة طباعة لا تُضاهى."
+    },
+    {
+      icon: Sparkles,
+      title: "Strategic Creative Direction",
+      titleAr: "التوجيه الإبداعي والاستراتيجي",
+      description: "One unified message, across every platform. Strategic direction that ensures brand consistency and amplifies your visual impact everywhere.",
+      descriptionAr: "رسالة موحدة، في كل منصة. توجيه استراتيجي يضمن تماسك صورة علامتك ويضاعف تأثيرها البصري عبر جميع قنوات التواصل."
     }
   ];
 
@@ -175,16 +189,22 @@ const Index = () => {
                   Premium Design
                 </span>
                 <span className="block text-foreground">
-                  For the Gulf Market
+                  Authentic Renewal
+                </span>
+                <span className="block text-foreground/80 text-3xl md:text-4xl lg:text-5xl mt-4">
+                  For the Omani Market
                 </span>
               </>
             ) : (
               <>
                 <span className="block text-foreground mb-2">
-                  تصميم راقي
+                  تصميم راقٍ
                 </span>
                 <span className="block bg-gradient-hero bg-clip-text text-transparent">
-                  للسوق الخليجي
+                  أصالة متجددة
+                </span>
+                <span className="block text-foreground/80 text-3xl md:text-4xl lg:text-5xl mt-4">
+                  للسوق العماني
                 </span>
               </>
             )}
@@ -193,8 +213,8 @@ const Index = () => {
           {/* Description with elegant styling */}
           <p className="text-lg md:text-xl lg:text-2xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed font-light animate-fade-in" style={{ animationDelay: '0.4s' }}>
             {language === 'en' 
-              ? 'Crafting visual identities that resonate with Omani and Gulf audiences—where culture meets contemporary design.'
-              : 'صناعة هويات بصرية تلامس الجمهور العماني والخليجي—حيث تلتقي الأصالة بالتصميم المعاصر.'
+              ? 'We celebrate visual identity that touches Omani and Gulf hearts—where deep cultural roots meet the pinnacle of contemporary design.'
+              : 'نحتفل بالهوية البصرية التي تلامس الوجدان العماني والخليجي—حيث تلتقي جذور الثقافة العريقة بقمة التصميم المعاصر.'
             }
           </p>
 
@@ -206,7 +226,7 @@ const Index = () => {
               onClick={() => scrollToSection('about')}
               className="text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-full shadow-glow hover:shadow-[0_0_60px_hsl(12_88%_65%/0.4)] hover:scale-105 transition-all duration-300 font-semibold"
             >
-              {language === 'en' ? 'Discover My Work' : 'اكتشف أعمالي'}
+              {language === 'en' ? "Unleash Your Brand's Distinction" : 'أطلق تميز علامتك'}
             </Button>
           </div>
 
@@ -250,18 +270,24 @@ const Index = () => {
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
-                {language === 'en' ? 'Design That Speaks Your Language' : 'تصميم يتحدث لغتك'}
+                {language === 'en' ? "Design That Speaks Your Audience's Language" : 'التصميم الذي يتحدث لغة جمهورك'}
               </h2>
               <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-6">
                 {language === 'en' 
-                  ? "I'm Rani—a visual identity designer focused exclusively on the Omani and Gulf market. I create brands that feel right at home in our culture while standing out in today's competitive landscape."
-                  : "أنا راني—مصمم هويات بصرية متخصص في السوق العماني والخليجي. أصمم علامات تجارية تنتمي لثقافتنا وتتميز في سوق اليوم التنافسي."
+                  ? "I'm Rani—a visual identity designer specialized in the Omani and Gulf market. I don't just design logos, I craft brands that dominate today's competitive landscape."
+                  : "أنا راني—مصمم هويات بصرية متخصص في السوق العماني والخليجي. لا أصمم مجرد شعارات، بل أصنع علامات تجارية تتصدر المشهد التنافسي اليوم."
+                }
+              </p>
+              <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-6">
+                {language === 'en' 
+                  ? "Whether you're launching a pioneering project or refreshing an established brand, I deliver clarity, confidence, and visual impact—designed specifically to resonate with your audience."
+                  : "سواء كنت تطلق مشروعًا رائدًا أو تجدد علامة قائمة، أقدم لك وضوحًا، ثقة، وتأثيرًا بصريًا مصممًا خصيصًا ليتردد صداه لدى جمهورك."
                 }
               </p>
               <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-8">
                 {language === 'en' 
-                  ? "Whether you're launching a startup or refreshing an established business, I deliver clarity, confidence, and visual impact—crafted specifically for Gulf audiences."
-                  : "سواء كنت تطلق مشروعًا جديدًا أو تجدد علامة قائمة، أقدم وضوحًا وثقة وتأثيرًا بصريًا—مصمم خصيصًا للجمهور الخليجي."
+                  ? "I work with ambitious startups, local retailers and markets, and specialized service providers."
+                  : "أتعامل مع الشركات الناشئة الطموحة، تجار التجزئة والأسواق المحلية، ومقدمي الخدمات المتخصصين."
                 }
               </p>
               
@@ -287,22 +313,22 @@ const Index = () => {
               </div>
 
               {/* Approach highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-4">
                 <div className="space-y-2">
-                  <h4 className="font-bold text-base text-primary">{language === 'en' ? 'My Approach' : 'منهجي'}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h4 className="font-bold text-lg text-primary">{language === 'en' ? 'My Approach: From Vision to Impactful Reality' : 'منهجي: من الرؤية إلى الواقع المؤثر'}</h4>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {language === 'en'
-                      ? 'Market research, cultural insight, visual excellence.'
-                      : 'بحث السوق، فهم ثقافي، تميز بصري.'
+                      ? 'Every project is a journey that starts with deep understanding of your market, audience, and vision. This understanding fuels the design that delivers tangible results.'
+                      : 'كل مشروع هو رحلة تبدأ بفهم عميق لسوقك، جمهورك، ورؤيتك. هذا الفهم هو الوقود الذي نترجمه إلى تصميم يحقق نتائج ملموسة.'
                     }
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-bold text-base text-primary">{language === 'en' ? 'Why Gulf-Focused?' : 'لماذا التركيز الخليجي؟'}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h4 className="font-bold text-base text-primary">{language === 'en' ? 'Why Gulf-Focused?' : 'لماذا التركيز على الخليج؟'}</h4>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {language === 'en'
-                      ? 'Because our market deserves designs that truly connect.'
-                      : 'لأن سوقنا يستحق تصاميم تتواصل بصدق.'
+                      ? "Because I believe successful design here requires cultural insight that goes beyond technical skill. I know what touches our audience's heart and mind."
+                      : 'لأنني أؤمن أن التصميم الناجح هنا يتطلب بصيرة ثقافية لا تكتفي بالمهارة التقنية. أعرف ما يلامس قلب جمهورنا وعقله.'
                     }
                   </p>
                 </div>
@@ -322,8 +348,8 @@ const Index = () => {
             <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-4"></div>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {language === 'en' 
-                ? 'Real projects for real Gulf brands—from concept to completion'
-                : 'مشاريع حقيقية لعلامات خليجية—من الفكرة إلى التنفيذ'
+                ? 'A legacy of creativity. Real projects for Gulf brands—from idea to achievement'
+                : 'إرث من الإبداع. مشاريع حقيقية لعلامات خليجية—من الفكرة إلى الإنجاز'
               }
             </p>
           </div>
@@ -371,17 +397,17 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12 md:mb-16 animate-on-scroll">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              {language === 'en' ? 'What I Offer' : 'ما أقدمه'}
+              {language === 'en' ? "Let's Work Together" : 'لنعمل معًا'}
             </h3>
             <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-4"></div>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {language === 'en'
-                ? 'Focused services designed to elevate your brand in the Gulf market'
-                : 'خدمات مركزة مصممة لرفع مستوى علامتك في السوق الخليجي'
+                ? "Focused services designed to elevate your brand's position in the Gulf market"
+                : 'خدمات مركزة ومصممة لرفع مكانة علامتك في السوق الخليجي'
               }
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <Card 
                 key={index} 
@@ -408,19 +434,19 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="animate-on-scroll">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              {language === 'en' ? "Ready to Elevate Your Brand?" : 'مستعد لرفع مستوى علامتك؟'}
+              {language === 'en' ? "Ready for Excellence?" : 'مستعد للتميز؟'}
             </h3>
             <div className="w-20 h-1 bg-gradient-warm mx-auto rounded-full mb-6"></div>
             <p className="text-lg md:text-xl text-foreground/80 mb-4 font-medium">
               {language === 'en' 
-                ? "Let's talk about your next project."
-                : 'لنتحدث عن مشروعك القادم.'
+                ? "Let's unleash your brand's next potential."
+                : 'دعنا نُطلق العنان لإمكانيات علامتك القادمة.'
               }
             </p>
             <p className="text-base md:text-lg text-muted-foreground mb-10 md:mb-12 max-w-2xl mx-auto">
               {language === 'en' 
-                ? "Whether you're building something new or refreshing what you have, I'm here to help make it stand out."
-                : 'سواء كنت تبني شيئًا جديدًا أو تجدد ما لديك، أنا هنا لمساعدتك على التميز.'
+                ? "Whether you're at the creation or renewal stage, I'm here to help you stand out and stay top of mind."
+                : 'سواء كنت في مرحلة الإنشاء أو التجديد، أنا هنا لمساعدتك على التميز والبقاء في الذهن.'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center max-w-2xl mx-auto animate-on-scroll stagger-1">
