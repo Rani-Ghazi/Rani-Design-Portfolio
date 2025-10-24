@@ -154,10 +154,10 @@ export default {
         },
         "glow-pulse": {
           "0%, 100%": {
-            boxShadow: "0 0 20px hsl(12 88% 65% / 0.2)"
+            boxShadow: "0 0 20px hsl(217 91% 60% / 0.2)"
           },
           "50%": {
-            boxShadow: "0 0 40px hsl(12 88% 65% / 0.4)"
+            boxShadow: "0 0 40px hsl(217 91% 60% / 0.4)"
           }
         },
         "shimmer": {
@@ -183,14 +183,20 @@ export default {
         "shimmer": "shimmer 2s linear infinite"
       },
       backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
         'gradient-warm': 'var(--gradient-warm)',
         'gradient-subtle': 'var(--gradient-subtle)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-mesh': 'var(--gradient-mesh)',
+        'gradient-shine': 'var(--gradient-shine)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'medium': 'var(--shadow-medium)',
+        'large': 'var(--shadow-large)',
         'glow': 'var(--shadow-glow)',
+        'glow-strong': 'var(--shadow-glow-strong)',
+        'elegant': 'var(--shadow-elegant)',
       },
     },
   },
