@@ -170,7 +170,7 @@ const Index = () => {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative flex flex-col gap-4 items-center justify-center px-4 max-w-5xl mx-auto"
+          className="relative flex flex-col gap-4 items-center justify-center px-4 max-w-5xl mx-auto py-12 md:py-16"
         >
           {/* Subtitle badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 backdrop-blur-sm border border-primary/20 shadow-soft">
