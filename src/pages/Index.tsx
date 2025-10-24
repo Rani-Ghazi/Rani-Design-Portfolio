@@ -181,7 +181,7 @@ const Index = () => {
           </div>
 
           {/* Main heading with enhanced typography */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-8 leading-[1.1] text-center">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-[1.1] text-center">
             {language === 'en' ? (
               <>
                 <span className="block bg-gradient-hero bg-clip-text text-transparent mb-2">
@@ -190,7 +190,7 @@ const Index = () => {
                 <span className="block text-foreground">
                   Authentic Renewal
                 </span>
-                <span className="block text-foreground/80 text-3xl md:text-4xl lg:text-5xl mt-4">
+                <span className="block text-foreground/80 text-xl md:text-2xl lg:text-3xl mt-3">
                   For the Omani Market
                 </span>
               </>
@@ -202,7 +202,7 @@ const Index = () => {
                 <span className="block bg-gradient-hero bg-clip-text text-transparent">
                   أصالة متجددة
                 </span>
-                <span className="block text-foreground/80 text-3xl md:text-4xl lg:text-5xl mt-4">
+                <span className="block text-foreground/80 text-xl md:text-2xl lg:text-3xl mt-3">
                   للسوق العماني
                 </span>
               </>
@@ -210,7 +210,7 @@ const Index = () => {
           </h1>
 
           {/* Description with elegant styling */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium text-center">
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed font-medium text-center">
             {language === 'en' 
               ? 'We celebrate visual identity that touches Omani and Gulf hearts—where deep cultural roots meet the pinnacle of contemporary design.'
               : 'نحتفل بالهوية البصرية التي تلامس الوجدان العماني والخليجي—حيث تلتقي جذور الثقافة العريقة بقمة التصميم المعاصر.'
@@ -222,7 +222,7 @@ const Index = () => {
             variant="hero" 
             size="lg"
             onClick={() => scrollToSection('about')}
-            className="relative overflow-hidden text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-large hover:shadow-glow-strong hover:scale-105 transition-all duration-500 font-semibold bg-gradient-primary group"
+            className="relative overflow-hidden text-sm md:text-base px-6 md:px-8 py-4 md:py-5 rounded-xl shadow-large hover:shadow-glow-strong hover:scale-105 transition-all duration-500 font-semibold bg-gradient-primary group"
           >
             <span className="relative z-10">{language === 'en' ? "Unleash Your Brand's Distinction" : 'أطلق تميز علامتك'}</span>
             <div className="absolute inset-0 bg-gradient-shine opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ backgroundSize: '200% 100%', animation: 'shimmer 2s infinite' }} />
