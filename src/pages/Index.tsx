@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, Palette, Package, Sparkles, Instagram } from "lucide-react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import heroBg from "@/assets/hero-bg.jpg";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -159,22 +160,20 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        {/* Sophisticated overlay with multiple layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background/98 via-background/90 to-background/98"></div>
-        <div className="absolute inset-0 bg-gradient-mesh opacity-20"></div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        
-        <div className="relative z-10 text-center px-4 md:px-6 py-20 max-w-5xl mx-auto">
+      {/* Hero Section with Aurora Background */}
+      <AuroraBackground>
+        <motion.div
+          initial={{ opacity: 0.0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="relative flex flex-col gap-4 items-center justify-center px-4 max-w-5xl mx-auto"
+        >
           {/* Subtitle badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 backdrop-blur-sm border border-primary/20 mb-8 animate-slide-down shadow-soft">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 backdrop-blur-sm border border-primary/20 shadow-soft">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
             <span className="text-sm font-semibold text-primary tracking-wide">
               {language === 'en' ? 'Trusted by Gulf Brands' : 'موثوق به من العلامات الخليجية'}
@@ -182,7 +181,7 @@ const Index = () => {
           </div>
 
           {/* Main heading with enhanced typography */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-8 leading-[1.1] animate-slide-up">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-8 leading-[1.1] text-center">
             {language === 'en' ? (
               <>
                 <span className="block bg-gradient-hero bg-clip-text text-transparent mb-2">
@@ -211,7 +210,7 @@ const Index = () => {
           </h1>
 
           {/* Description with elegant styling */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in">
+          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-medium text-center">
             {language === 'en' 
               ? 'We celebrate visual identity that touches Omani and Gulf hearts—where deep cultural roots meet the pinnacle of contemporary design.'
               : 'نحتفل بالهوية البصرية التي تلامس الوجدان العماني والخليجي—حيث تلتقي جذور الثقافة العريقة بقمة التصميم المعاصر.'
@@ -219,26 +218,24 @@ const Index = () => {
           </p>
 
           {/* CTA Button with enhanced styling */}
-          <div className="animate-zoom-in">
-            <Button 
-              variant="hero" 
-              size="lg"
-              onClick={() => scrollToSection('about')}
-              className="relative overflow-hidden text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-large hover:shadow-glow-strong hover:scale-105 transition-all duration-500 font-semibold bg-gradient-primary group"
-            >
-              <span className="relative z-10">{language === 'en' ? "Unleash Your Brand's Distinction" : 'أطلق تميز علامتك'}</span>
-              <div className="absolute inset-0 bg-gradient-shine opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ backgroundSize: '200% 100%', animation: 'shimmer 2s infinite' }} />
-            </Button>
-          </div>
+          <Button 
+            variant="hero" 
+            size="lg"
+            onClick={() => scrollToSection('about')}
+            className="relative overflow-hidden text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-large hover:shadow-glow-strong hover:scale-105 transition-all duration-500 font-semibold bg-gradient-primary group"
+          >
+            <span className="relative z-10">{language === 'en' ? "Unleash Your Brand's Distinction" : 'أطلق تميز علامتك'}</span>
+            <div className="absolute inset-0 bg-gradient-shine opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ backgroundSize: '200% 100%', animation: 'shimmer 2s infinite' }} />
+          </Button>
 
           {/* Scroll indicator */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+          <div className="mt-12 animate-float">
             <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
               <div className="w-1.5 h-3 bg-gradient-primary rounded-full"></div>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </AuroraBackground>
 
       {/* About Section - Moved Higher */}
       <section id="about" className="py-24 md:py-32 px-4 md:px-6 bg-gradient-subtle overflow-hidden relative">
