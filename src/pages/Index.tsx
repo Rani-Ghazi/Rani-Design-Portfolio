@@ -9,6 +9,11 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import social1 from "@/assets/social-1.png";
+import social2 from "@/assets/social-2.png";
+import social3 from "@/assets/social-3.png";
+import social4 from "@/assets/social-4.png";
+import social5 from "@/assets/social-5.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -70,6 +75,41 @@ const Index = () => {
       titleAr: "تصميم الملصقات",
       description: "Bold creative posters",
       descriptionAr: "ملصقات إبداعية جريئة"
+    },
+    {
+      image: social1,
+      title: "AMINOLEAN Campaign",
+      titleAr: "حملة أمينولين",
+      description: "Social media design for sports drink",
+      descriptionAr: "تصميم سوشيال ميديا لمشروب رياضي"
+    },
+    {
+      image: social2,
+      title: "Maxtella Creative",
+      titleAr: "إبداع ماكستيلا",
+      description: "Product photography and design",
+      descriptionAr: "تصوير وتصميم منتج"
+    },
+    {
+      image: social3,
+      title: "Maggi Brand Content",
+      titleAr: "محتوى علامة ماجي",
+      description: "Premium food product campaign",
+      descriptionAr: "حملة منتج غذائي فاخر"
+    },
+    {
+      image: social4,
+      title: "Cofftea Brand",
+      titleAr: "علامة كوفتي",
+      description: "Tea product lifestyle design",
+      descriptionAr: "تصميم نمط حياة لمنتج الشاي"
+    },
+    {
+      image: social5,
+      title: "Monster Energy",
+      titleAr: "مونستر إنرجي",
+      description: "Bold energy drink campaign",
+      descriptionAr: "حملة جريئة لمشروب الطاقة"
     }
   ];
 
