@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Mail, Phone, Palette, Package, Sparkles, Instagram } from "lucide-react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { PortfolioModal } from "@/components/PortfolioModal";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -18,6 +19,9 @@ import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'ar'>('en');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -25,6 +29,19 @@ const Index = () => {
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'ar' : 'en');
+  };
+
+  const openModal = (index: number) => {
+    setSelectedProjectIndex(index);
+    setModalOpen(true);
+  };
+
+  const navigateModal = (direction: 'prev' | 'next') => {
+    if (direction === 'prev' && selectedProjectIndex > 0) {
+      setSelectedProjectIndex(selectedProjectIndex - 1);
+    } else if (direction === 'next' && selectedProjectIndex < filteredProjects.length - 1) {
+      setSelectedProjectIndex(selectedProjectIndex + 1);
+    }
   };
 
   // Scroll animation observer
@@ -53,65 +70,85 @@ const Index = () => {
       title: "Brand Identity Design",
       titleAr: "تصميم هوية تجارية",
       description: "Complete branding package",
-      descriptionAr: "حزمة كاملة للهوية البصرية"
+      descriptionAr: "حزمة كاملة للهوية البصرية",
+      category: "logos"
     },
     {
       image: project2,
       title: "Social Media Graphics",
       titleAr: "تصميم منشورات التواصل الاجتماعي",
       description: "Engaging visual content",
-      descriptionAr: "محتوى بصري جذاب"
+      descriptionAr: "محتوى بصري جذاب",
+      category: "print"
     },
     {
       image: project3,
       title: "Packaging Design",
       titleAr: "تصميم العبوات",
       description: "Elegant product packaging",
-      descriptionAr: "تغليف أنيق للمنتجات"
+      descriptionAr: "تغليف أنيق للمنتجات",
+      category: "print"
     },
     {
       image: project4,
       title: "Poster Design",
       titleAr: "تصميم الملصقات",
       description: "Bold creative posters",
-      descriptionAr: "ملصقات إبداعية جريئة"
+      descriptionAr: "ملصقات إبداعية جريئة",
+      category: "print"
     },
     {
       image: social1,
       title: "AMINOLEAN Campaign",
       titleAr: "حملة أمينولين",
       description: "Social media design for sports drink",
-      descriptionAr: "تصميم سوشيال ميديا لمشروب رياضي"
+      descriptionAr: "تصميم سوشيال ميديا لمشروب رياضي",
+      category: "social"
     },
     {
       image: social2,
       title: "Maxtella Creative",
       titleAr: "إبداع ماكستيلا",
       description: "Product photography and design",
-      descriptionAr: "تصوير وتصميم منتج"
+      descriptionAr: "تصوير وتصميم منتج",
+      category: "social"
     },
     {
       image: social3,
       title: "Maggi Brand Content",
       titleAr: "محتوى علامة ماجي",
       description: "Premium food product campaign",
-      descriptionAr: "حملة منتج غذائي فاخر"
+      descriptionAr: "حملة منتج غذائي فاخر",
+      category: "social"
     },
     {
       image: social4,
       title: "Cofftea Brand",
       titleAr: "علامة كوفتي",
       description: "Tea product lifestyle design",
-      descriptionAr: "تصميم نمط حياة لمنتج الشاي"
+      descriptionAr: "تصميم نمط حياة لمنتج الشاي",
+      category: "social"
     },
     {
       image: social5,
       title: "Monster Energy",
       titleAr: "مونستر إنرجي",
       description: "Bold energy drink campaign",
-      descriptionAr: "حملة جريئة لمشروب الطاقة"
+      descriptionAr: "حملة جريئة لمشروب الطاقة",
+      category: "social"
     }
   ];
+
+  const categories = [
+    { id: 'all', labelEn: 'All Work', labelAr: 'جميع الأعمال' },
+    { id: 'logos', labelEn: 'Logos', labelAr: 'الشعارات' },
+    { id: 'print', labelEn: 'Print', labelAr: 'المطبوعات' },
+    { id: 'social', labelEn: 'Social Media', labelAr: 'سوشيال ميديا' }
+  ];
+
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
+    : projects.filter(p => p.category === selectedCategory);
 
   const services = [
     {
@@ -388,15 +425,35 @@ const Index = () => {
                 : 'إرث من الإبداع. مشاريع حقيقية لعلامات خليجية—من الفكرة إلى الإنجاز'
               }
             </p>
+
+            {/* Category Filters */}
+            <div className="flex flex-wrap justify-center gap-3 pt-6">
+              {categories.map((cat) => (
+                <Button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  variant={selectedCategory === cat.id ? "default" : "outline"}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                    selectedCategory === cat.id 
+                      ? 'bg-gradient-primary shadow-glow scale-105' 
+                      : 'hover:border-primary/50 hover:scale-105'
+                  }`}
+                >
+                  {language === 'en' ? cat.labelEn : cat.labelAr}
+                </Button>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto">
-            {projects.map((project, index) => (
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {filteredProjects.map((project, index) => (
               <div 
                 key={index} 
-                className={`group relative overflow-hidden rounded-3xl shadow-large hover:shadow-glow-strong transition-all duration-700 bg-card animate-on-scroll border border-border/50 hover:border-primary/30`}
+                onClick={() => openModal(index)}
+                className={`group relative overflow-hidden rounded-2xl shadow-large hover:shadow-glow-strong transition-all duration-500 bg-card animate-on-scroll border border-border/50 hover:border-primary/30 cursor-pointer`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
+                <div className="aspect-square overflow-hidden relative">
                   <img 
                     src={project.image} 
                     alt={language === 'en' ? project.title : project.titleAr}
@@ -405,11 +462,11 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-full group-hover:translate-y-0 transition-all duration-500">
-                  <h4 className="text-3xl font-display font-bold text-foreground mb-3">
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                  <h4 className="text-lg md:text-xl font-display font-bold text-foreground mb-1">
                     {language === 'en' ? project.title : project.titleAr}
                   </h4>
-                  <p className="text-lg text-muted-foreground font-medium">
+                  <p className="text-sm text-muted-foreground font-medium line-clamp-2">
                     {language === 'en' ? project.description : project.descriptionAr}
                   </p>
                 </div>
@@ -533,6 +590,16 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Portfolio Modal */}
+      <PortfolioModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        currentIndex={selectedProjectIndex}
+        projects={filteredProjects}
+        onNavigate={navigateModal}
+        language={language}
+      />
     </div>
   );
 };
