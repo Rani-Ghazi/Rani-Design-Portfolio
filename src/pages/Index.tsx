@@ -15,11 +15,17 @@ import social2 from "@/assets/social-2.png";
 import social3 from "@/assets/social-3.png";
 import social4 from "@/assets/social-4.png";
 import social5 from "@/assets/social-5.png";
+import social6 from "@/assets/social-6.png";
+import social7 from "@/assets/social-7.png";
+import social8 from "@/assets/social-8.png";
+import social9 from "@/assets/social-9.png";
+import social10 from "@/assets/social-10.png";
+import social11 from "@/assets/social-11.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
   const [language, setLanguage] = useState<'en' | 'ar'>('en');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('social');
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
@@ -136,19 +142,64 @@ const Index = () => {
       description: "Bold energy drink campaign",
       descriptionAr: "حملة جريئة لمشروب الطاقة",
       category: "social"
+    },
+    {
+      image: social6,
+      title: "Maxtella Chocolate",
+      titleAr: "شوكولاتة ماكستيلا",
+      description: "Premium chocolate brand campaign",
+      descriptionAr: "حملة علامة شوكولاتة فاخرة",
+      category: "social"
+    },
+    {
+      image: social7,
+      title: "Food Campaign",
+      titleAr: "حملة طعام",
+      description: "Appetizing food photography and design",
+      descriptionAr: "تصوير وتصميم طعام شهي",
+      category: "social"
+    },
+    {
+      image: social8,
+      title: "Sports Energy",
+      titleAr: "طاقة رياضية",
+      description: "Dynamic sports drink campaign",
+      descriptionAr: "حملة ديناميكية لمشروب رياضي",
+      category: "social"
+    },
+    {
+      image: social9,
+      title: "Premium Product",
+      titleAr: "منتج فاخر",
+      description: "Luxury product presentation",
+      descriptionAr: "عرض منتج فاخر",
+      category: "social"
+    },
+    {
+      image: social10,
+      title: "Creative Campaign",
+      titleAr: "حملة إبداعية",
+      description: "Innovative social media design",
+      descriptionAr: "تصميم سوشيال ميديا مبتكر",
+      category: "social"
+    },
+    {
+      image: social11,
+      title: "Brand Story",
+      titleAr: "قصة العلامة",
+      description: "Engaging brand storytelling",
+      descriptionAr: "سرد قصة العلامة بشكل جذاب",
+      category: "social"
     }
   ];
 
   const categories = [
-    { id: 'all', labelEn: 'All Work', labelAr: 'جميع الأعمال' },
+    { id: 'social', labelEn: 'Social Media', labelAr: 'سوشيال ميديا' },
     { id: 'logos', labelEn: 'Logos', labelAr: 'الشعارات' },
-    { id: 'print', labelEn: 'Print', labelAr: 'المطبوعات' },
-    { id: 'social', labelEn: 'Social Media', labelAr: 'سوشيال ميديا' }
+    { id: 'print', labelEn: 'Print', labelAr: 'المطبوعات' }
   ];
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === selectedCategory);
+  const filteredProjects = projects.filter(p => p.category === selectedCategory);
 
   const services = [
     {
@@ -409,34 +460,51 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 md:py-32 px-4 md:px-6 overflow-hidden bg-background relative">
-        <div className="container mx-auto">
-          <div className="text-center mb-12 md:mb-16 animate-on-scroll space-y-6">
-            <div className="inline-block px-5 py-2.5 bg-gradient-to-r from-primary/15 to-accent/15 backdrop-blur-sm rounded-full mb-4 border border-primary/20 shadow-soft">
-              <p className="text-primary font-semibold text-sm tracking-wide">{language === 'en' ? 'Portfolio' : 'أعمالي'}</p>
+      {/* Portfolio Section - Main Showcase */}
+      <section id="portfolio" className="py-32 md:py-40 px-4 md:px-6 overflow-hidden bg-gradient-subtle relative">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 bg-gradient-mesh opacity-5"></div>
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
+        
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16 md:mb-20 animate-on-scroll space-y-8">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full border border-primary/30 shadow-glow">
+              <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+              <p className="text-primary font-bold text-sm tracking-wide uppercase">{language === 'en' ? 'Featured Work' : 'الأعمال المميزة'}</p>
             </div>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
-              {language === 'en' ? 'Selected Work' : 'أعمال منتقاة'}
+            <h3 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
+              {language === 'en' ? (
+                <>
+                  <span className="block bg-gradient-hero bg-clip-text text-transparent mb-2">Creative Excellence</span>
+                  <span className="block text-foreground">That Drives Results</span>
+                </>
+              ) : (
+                <>
+                  <span className="block text-foreground mb-2">الإبداع المتميز</span>
+                  <span className="block bg-gradient-hero bg-clip-text text-transparent">الذي يحقق النتائج</span>
+                </>
+              )}
             </h3>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
               {language === 'en' 
-                ? 'A legacy of creativity. Real projects for Gulf brands—from idea to achievement'
-                : 'إرث من الإبداع. مشاريع حقيقية لعلامات خليجية—من الفكرة إلى الإنجاز'
+                ? 'Discover authentic designs that resonate with Gulf audiences—where cultural heritage meets contemporary vision'
+                : 'اكتشف تصاميم أصيلة تلامس قلوب الجمهور الخليجي—حيث يلتقي التراث الثقافي بالرؤية العصرية'
               }
             </p>
 
-            {/* Category Filters */}
-            <div className="flex flex-wrap justify-center gap-3 pt-6">
+            {/* Enhanced Category Filters */}
+            <div className="flex flex-wrap justify-center gap-4 pt-8">
               {categories.map((cat) => (
                 <Button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
                   variant={selectedCategory === cat.id ? "default" : "outline"}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                  size="lg"
+                  className={`px-8 py-6 rounded-2xl text-base font-bold transition-all duration-300 ${
                     selectedCategory === cat.id 
-                      ? 'bg-gradient-primary shadow-glow scale-105' 
-                      : 'hover:border-primary/50 hover:scale-105'
+                      ? 'bg-gradient-primary shadow-glow-strong scale-110 text-white border-transparent' 
+                      : 'bg-card/50 backdrop-blur-sm hover:border-primary hover:shadow-glow hover:scale-105 hover:bg-card'
                   }`}
                 >
                   {language === 'en' ? cat.labelEn : cat.labelAr}
@@ -445,30 +513,40 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+          {/* Enhanced Portfolio Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {filteredProjects.map((project, index) => (
               <div 
                 key={index} 
                 onClick={() => openModal(index)}
-                className={`group relative overflow-hidden rounded-2xl shadow-large hover:shadow-glow-strong transition-all duration-500 bg-card animate-on-scroll border border-border/50 hover:border-primary/30 cursor-pointer`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`group relative overflow-hidden rounded-3xl shadow-large hover:shadow-glow-strong transition-all duration-700 bg-card animate-on-scroll border-2 border-border/50 hover:border-primary/50 cursor-pointer hover:scale-[1.02]`}
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="aspect-square overflow-hidden relative">
+                <div className="aspect-square overflow-hidden relative bg-muted">
                   <img 
                     src={project.image} 
                     alt={language === 'en' ? project.title : project.titleAr}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-2"
                   />
-                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Colored accent overlay */}
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-15 transition-opacity duration-500 mix-blend-multiply" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-all duration-500">
-                  <h4 className="text-lg md:text-xl font-display font-bold text-foreground mb-1">
+                
+                {/* Project info - appears on hover */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-all duration-500 backdrop-blur-xl bg-background/90">
+                  <h4 className="text-base md:text-lg font-display font-bold text-foreground mb-1 truncate">
                     {language === 'en' ? project.title : project.titleAr}
                   </h4>
-                  <p className="text-sm text-muted-foreground font-medium line-clamp-2">
+                  <p className="text-xs md:text-sm text-muted-foreground font-medium line-clamp-2">
                     {language === 'en' ? project.description : project.descriptionAr}
                   </p>
+                </div>
+
+                {/* Click indicator icon */}
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 shadow-glow">
+                  <Sparkles className="w-5 h-5 text-primary" />
                 </div>
               </div>
             ))}
