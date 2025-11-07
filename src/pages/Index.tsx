@@ -27,6 +27,11 @@ import social14 from "@/assets/social-14.png";
 import social15 from "@/assets/social-15.png";
 import social16 from "@/assets/social-16.png";
 import social17 from "@/assets/social-17.png";
+import social18 from "@/assets/social-18.png";
+import social19 from "@/assets/social-19.png";
+import social20 from "@/assets/social-20.png";
+import social21 from "@/assets/social-21.png";
+import social22 from "@/assets/social-22.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -243,6 +248,46 @@ const Index = () => {
       titleAr: "حملة الحياة الرقمية",
       description: "Technology and digital services",
       descriptionAr: "التكنولوجيا والخدمات الرقمية",
+      category: "social"
+    },
+    {
+      image: social18,
+      title: "Saudi Tourism Campaign",
+      titleAr: "حملة السياحة السعودية",
+      description: "Journey to the peaceful flight",
+      descriptionAr: "جناح إلى السكينة - الطيران العماني",
+      category: "social"
+    },
+    {
+      image: social19,
+      title: "Oman National Day",
+      titleAr: "اليوم الوطني العماني",
+      description: "National day celebration design",
+      descriptionAr: "تصميم احتفال اليوم الوطني",
+      category: "social"
+    },
+    {
+      image: social20,
+      title: "Grande Beauty Studio",
+      titleAr: "استوديو غراندي للتجميل",
+      description: "Beauty without filters campaign",
+      descriptionAr: "حملة جمالك من غير فلاتر",
+      category: "social"
+    },
+    {
+      image: social21,
+      title: "Dental Care Campaign",
+      titleAr: "حملة العناية بالأسنان",
+      description: "Say goodbye to selfie anxiety",
+      descriptionAr: "ودعي قلقك من السيلفي",
+      category: "social"
+    },
+    {
+      image: social22,
+      title: "Oman Football Team",
+      titleAr: "منتخب عمان لكرة القدم",
+      description: "Always together forever - National team support",
+      descriptionAr: "كلنا معاك إلى الأبد",
       category: "social"
     }
   ];
