@@ -32,6 +32,11 @@ import social19 from "@/assets/social-19.png";
 import social20 from "@/assets/social-20.png";
 import social21 from "@/assets/social-21.png";
 import social22 from "@/assets/social-22.png";
+import social23 from "@/assets/social-23.png";
+import social24 from "@/assets/social-24.png";
+import social25 from "@/assets/social-25.png";
+import social26 from "@/assets/social-26.png";
+import social27 from "@/assets/social-27.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -288,6 +293,46 @@ const Index = () => {
       titleAr: "منتخب عمان لكرة القدم",
       description: "Always together forever - National team support",
       descriptionAr: "كلنا معاك إلى الأبد",
+      category: "social"
+    },
+    {
+      image: social23,
+      title: "Oman Vision Campaign",
+      titleAr: "حملة رؤية عمان",
+      description: "Soar to new heights - National pride campaign",
+      descriptionAr: "ارتق إلى آفاق جديدة - حملة فخر وطني",
+      category: "social"
+    },
+    {
+      image: social24,
+      title: "Oman Realty",
+      titleAr: "عمان للعقارات",
+      description: "Coming soon - New properties campaign",
+      descriptionAr: "قريباً - حملة عقارات جديدة",
+      category: "social"
+    },
+    {
+      image: social25,
+      title: "Omantel 1GB Promotion",
+      titleAr: "عرض عمانتل 1 جيجا",
+      description: "Social and data promotion campaign",
+      descriptionAr: "حملة ترويجية لعرض البيانات",
+      category: "social"
+    },
+    {
+      image: social26,
+      title: "Chips Oman",
+      titleAr: "بطاطس عمان",
+      description: "Spicy snack product campaign",
+      descriptionAr: "حملة منتج وجبات خفيفة حارة",
+      category: "social"
+    },
+    {
+      image: social27,
+      title: "Hawas Fragrance",
+      titleAr: "عطر هواس",
+      description: "Fire fragrance for him - Luxury perfume campaign",
+      descriptionAr: "رشة تكفي والباقي موس - حملة عطر فاخر",
       category: "social"
     }
   ];
