@@ -21,6 +21,12 @@ import social8 from "@/assets/social-8.png";
 import social9 from "@/assets/social-9.png";
 import social10 from "@/assets/social-10.png";
 import social11 from "@/assets/social-11.png";
+import social12 from "@/assets/social-12.png";
+import social13 from "@/assets/social-13.png";
+import social14 from "@/assets/social-14.png";
+import social15 from "@/assets/social-15.png";
+import social16 from "@/assets/social-16.png";
+import social17 from "@/assets/social-17.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -189,6 +195,54 @@ const Index = () => {
       titleAr: "قصة العلامة",
       description: "Engaging brand storytelling",
       descriptionAr: "سرد قصة العلامة بشكل جذاب",
+      category: "social"
+    },
+    {
+      image: social12,
+      title: "Ford Ramadan Campaign",
+      titleAr: "حملة فورد رمضان",
+      description: "Ramadan special automotive campaign",
+      descriptionAr: "حملة سيارات خاصة برمضان",
+      category: "social"
+    },
+    {
+      image: social13,
+      title: "Real Estate Marketing",
+      titleAr: "تسويق عقاري",
+      description: "Construction project social media",
+      descriptionAr: "سوشيال ميديا لمشروع إنشائي",
+      category: "social"
+    },
+    {
+      image: social14,
+      title: "Sohar Banking App",
+      titleAr: "تطبيق بنك صحار",
+      description: "Financial app promotional design",
+      descriptionAr: "تصميم ترويجي لتطبيق مالي",
+      category: "social"
+    },
+    {
+      image: social15,
+      title: "Ooredoo Brand",
+      titleAr: "علامة أوريدو",
+      description: "Telecommunications campaign design",
+      descriptionAr: "تصميم حملة اتصالات",
+      category: "social"
+    },
+    {
+      image: social16,
+      title: "Delivery Service",
+      titleAr: "خدمة توصيل",
+      description: "E-commerce delivery promotion",
+      descriptionAr: "ترويج خدمة التوصيل الإلكتروني",
+      category: "social"
+    },
+    {
+      image: social17,
+      title: "Digital Life Campaign",
+      titleAr: "حملة الحياة الرقمية",
+      description: "Technology and digital services",
+      descriptionAr: "التكنولوجيا والخدمات الرقمية",
       category: "social"
     }
   ];
