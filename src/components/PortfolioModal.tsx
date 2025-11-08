@@ -48,7 +48,7 @@ export const PortfolioModal = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className="max-w-7xl w-[95vw] sm:w-[90vw] h-[90vh] sm:h-[95vh] p-0 bg-background/95 backdrop-blur-xl border-border/50 overflow-hidden shadow-2xl"
+        className="max-w-[98vw] lg:max-w-[95vw] w-[95vw] sm:w-[90vw] lg:w-[95vw] h-[90vh] sm:h-[95vh] p-0 bg-background/95 backdrop-blur-xl border-border/50 overflow-hidden shadow-2xl"
         onKeyDown={handleKeyPress}
       >
         <DialogTitle className="sr-only">
@@ -106,7 +106,7 @@ export const PortfolioModal = ({
 
         <div className="flex flex-col h-full">
           {/* Image Container */}
-          <div className="flex-1 relative overflow-hidden bg-muted/30">
+          <div className="flex-1 relative overflow-auto bg-muted/30">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -114,12 +114,12 @@ export const PortfolioModal = ({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="w-full h-full flex items-center justify-center p-2 sm:p-4 md:p-6"
+                className="w-full h-full flex items-center justify-center p-2 sm:p-4 lg:p-8"
               >
                 <motion.img
                   src={currentProject.image}
                   alt={language === 'en' ? currentProject.title : currentProject.titleAr}
-                  className={`max-w-full max-h-full object-contain rounded-md sm:rounded-lg shadow-xl transition-all duration-500 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+                  className={`w-full h-full object-contain rounded-md sm:rounded-lg shadow-xl transition-all duration-500 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
                   animate={{
                     scale: isZoomed ? (window.innerWidth < 640 ? 1.8 : 1.5) : 1,
                   }}
