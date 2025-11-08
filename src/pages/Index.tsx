@@ -66,7 +66,7 @@ const Index = () => {
     }
   };
 
-  // Scroll animation observer
+  // Scroll animation observer (ensure new elements after tab change are observed)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -84,7 +84,7 @@ const Index = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [selectedCategory]);
 
   const projects = [
     {
