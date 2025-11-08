@@ -48,7 +48,7 @@ export const PortfolioModal = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className="max-w-7xl w-[95vw] h-[95vh] p-0 bg-background/95 backdrop-blur-xl border-border/50 overflow-hidden shadow-2xl"
+        className="max-w-7xl w-[95vw] sm:w-[90vw] h-[90vh] sm:h-[95vh] p-0 bg-background/95 backdrop-blur-xl border-border/50 overflow-hidden shadow-2xl"
         onKeyDown={handleKeyPress}
       >
         <DialogTitle className="sr-only">
@@ -59,20 +59,20 @@ export const PortfolioModal = ({
         <Button
           variant="ghost"
           size="icon"
-          className="absolute right-4 top-4 z-50 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110"
+          className="absolute right-2 top-2 sm:right-4 sm:top-4 z-50 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110"
           onClick={onClose}
         >
-          <X className="h-5 w-5" />
+          <X className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
 
         {/* Zoom Toggle */}
         <Button
           variant="ghost"
           size="icon"
-          className="absolute right-16 top-4 z-50 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110"
+          className="absolute right-12 top-2 sm:right-16 sm:top-4 z-50 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110"
           onClick={() => setIsZoomed(!isZoomed)}
         >
-          {isZoomed ? <ZoomOut className="h-5 w-5" /> : <ZoomIn className="h-5 w-5" />}
+          {isZoomed ? <ZoomOut className="h-4 w-4 sm:h-5 sm:w-5" /> : <ZoomIn className="h-4 w-4 sm:h-5 sm:w-5" />}
         </Button>
 
         {/* Navigation Buttons */}
@@ -80,13 +80,13 @@ export const PortfolioModal = ({
           <Button
             variant="ghost"
             size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-50 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={() => {
               onNavigate('prev');
               setIsZoomed(false);
             }}
           >
-            <ChevronLeft className="h-7 w-7" />
+            <ChevronLeft className="h-5 w-5 sm:h-7 sm:w-7" />
           </Button>
         )}
 
@@ -94,13 +94,13 @@ export const PortfolioModal = ({
           <Button
             variant="ghost"
             size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-50 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-background/90 backdrop-blur-md hover:bg-background shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={() => {
               onNavigate('next');
               setIsZoomed(false);
             }}
           >
-            <ChevronRight className="h-7 w-7" />
+            <ChevronRight className="h-5 w-5 sm:h-7 sm:w-7" />
           </Button>
         )}
 
@@ -114,14 +114,14 @@ export const PortfolioModal = ({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="w-full h-full flex items-center justify-center p-4"
+                className="w-full h-full flex items-center justify-center p-2 sm:p-4 md:p-6"
               >
                 <motion.img
                   src={currentProject.image}
                   alt={language === 'en' ? currentProject.title : currentProject.titleAr}
-                  className={`max-w-full max-h-full object-contain rounded-lg shadow-xl transition-all duration-500 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+                  className={`max-w-full max-h-full object-contain rounded-md sm:rounded-lg shadow-xl transition-all duration-500 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
                   animate={{
-                    scale: isZoomed ? 1.5 : 1,
+                    scale: isZoomed ? (window.innerWidth < 640 ? 1.8 : 1.5) : 1,
                   }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
                   onClick={() => setIsZoomed(!isZoomed)}
@@ -139,46 +139,46 @@ export const PortfolioModal = ({
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}
-            className="bg-card/95 backdrop-blur-md border-t border-border/50 px-8 py-6"
+            className="bg-card/95 backdrop-blur-md border-t border-border/50 px-3 py-3 sm:px-6 sm:py-5 md:px-8 md:py-6"
           >
-            <div className="flex items-center justify-between gap-6">
-              <div className="flex-1 space-y-1">
-                <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-6">
+              <div className="flex-1 space-y-1 min-w-0">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent truncate">
                   {language === 'en' ? currentProject.title : currentProject.titleAr}
                 </h3>
-                <p className="text-muted-foreground text-base">
+                <p className="text-muted-foreground text-xs sm:text-sm md:text-base line-clamp-2 sm:line-clamp-1">
                   {language === 'en' ? currentProject.description : currentProject.descriptionAr}
                 </p>
               </div>
               
               {/* Counter */}
-              <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-                <span className="text-sm font-semibold text-primary">
+              <div className="flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-primary/10 border border-primary/20 shrink-0">
+                <span className="text-xs sm:text-sm font-semibold text-primary">
                   {currentIndex + 1}
                 </span>
-                <span className="text-sm text-muted-foreground">/</span>
-                <span className="text-sm text-muted-foreground">
+                <span className="text-xs sm:text-sm text-muted-foreground">/</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">
                   {projects.length}
                 </span>
               </div>
             </div>
             
             {/* Keyboard Hints */}
-            <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground/70">
-              <span className="flex items-center gap-1.5">
-                <kbd className="px-2 py-1 bg-muted rounded text-xs">←</kbd>
-                <kbd className="px-2 py-1 bg-muted rounded text-xs">→</kbd>
-                {language === 'en' ? 'Navigate' : 'التنقل'}
+            <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-2 sm:gap-4 text-xs text-muted-foreground/70">
+              <span className="flex items-center gap-1 sm:gap-1.5">
+                <kbd className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-muted rounded text-xs">←</kbd>
+                <kbd className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-muted rounded text-xs">→</kbd>
+                <span className="hidden sm:inline">{language === 'en' ? 'Navigate' : 'التنقل'}</span>
               </span>
-              <span className="flex items-center gap-1.5">
-                <kbd className="px-2 py-1 bg-muted rounded text-xs">ESC</kbd>
-                {language === 'en' ? 'Close' : 'إغلاق'}
+              <span className="flex items-center gap-1 sm:gap-1.5">
+                <kbd className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-muted rounded text-xs">ESC</kbd>
+                <span className="hidden sm:inline">{language === 'en' ? 'Close' : 'إغلاق'}</span>
               </span>
-              <span className="flex items-center gap-1.5">
-                <kbd className="px-2 py-1 bg-muted rounded text-xs">
+              <span className="flex items-center gap-1 sm:gap-1.5">
+                <kbd className="px-1.5 py-0.5 sm:px-2 sm:py-1 bg-muted rounded text-xs">
                   {language === 'en' ? 'Click' : 'اضغط'}
                 </kbd>
-                {language === 'en' ? 'Zoom' : 'تكبير'}
+                <span className="hidden sm:inline">{language === 'en' ? 'Zoom' : 'تكبير'}</span>
               </span>
             </div>
           </motion.div>
