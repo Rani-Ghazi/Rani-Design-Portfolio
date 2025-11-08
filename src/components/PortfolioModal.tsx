@@ -119,7 +119,7 @@ export const PortfolioModal = ({
                 <motion.img
                   src={currentProject.image}
                   alt={language === 'en' ? currentProject.title : currentProject.titleAr}
-                  className={`w-full h-full object-contain rounded-md sm:rounded-lg shadow-xl transition-all duration-500 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+                  className={`max-w-full max-h-full object-contain rounded-md sm:rounded-lg shadow-xl transition-all duration-500 ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
                   animate={{
                     scale: isZoomed ? (window.innerWidth < 640 ? 1.8 : 1.5) : 1,
                   }}
