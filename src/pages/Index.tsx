@@ -88,14 +88,6 @@ const Index = () => {
 
   const projects = [
     {
-      image: project1,
-      title: "Brand Identity Design",
-      titleAr: "تصميم هوية تجارية",
-      description: "Complete branding package",
-      descriptionAr: "حزمة كاملة للهوية البصرية",
-      category: "logos"
-    },
-    {
       image: project2,
       title: "Social Media Graphics",
       titleAr: "تصميم منشورات التواصل الاجتماعي",
@@ -339,7 +331,6 @@ const Index = () => {
 
   const categories = [
     { id: 'social', labelEn: 'Social Media', labelAr: 'سوشيال ميديا' },
-    { id: 'logos', labelEn: 'Logos', labelAr: 'الشعارات' },
     { id: 'print', labelEn: 'Print', labelAr: 'المطبوعات' }
   ];
 
