@@ -37,6 +37,9 @@ import social24 from "@/assets/social-24.png";
 import social25 from "@/assets/social-25.png";
 import social26 from "@/assets/social-26.png";
 import social27 from "@/assets/social-27.png";
+import brand1 from "@/assets/brand-1.png";
+import brand2 from "@/assets/brand-2.png";
+import brand3 from "@/assets/brand-3.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -326,12 +329,37 @@ const Index = () => {
       description: "Fire fragrance for him - Luxury perfume campaign",
       descriptionAr: "رشة تكفي والباقي موس - حملة عطر فاخر",
       category: "social"
+    },
+    {
+      image: brand1,
+      title: "Lamsa Brand Identity",
+      titleAr: "هوية لمسة",
+      description: "Complete brand identity with elegant gold aesthetic",
+      descriptionAr: "هوية بصرية شاملة بتصميم ذهبي أنيق",
+      category: "brand"
+    },
+    {
+      image: brand2,
+      title: "Al-Sabil Contracting",
+      titleAr: "هوية السبيل للمقاولات",
+      description: "Bold construction company branding with modern design",
+      descriptionAr: "هوية شركة مقاولات جريئة بتصميم عصري",
+      category: "brand"
+    },
+    {
+      image: brand3,
+      title: "Premium Jewelry Brand",
+      titleAr: "هوية مجوهرات راقية",
+      description: "Luxury jewelry brand identity with sophisticated styling",
+      descriptionAr: "هوية علامة مجوهرات فاخرة بأسلوب راقي",
+      category: "brand"
     }
   ];
 
   const categories = [
     { id: 'social', labelEn: 'Social Media', labelAr: 'سوشيال ميديا' },
-    { id: 'print', labelEn: 'Print', labelAr: 'المطبوعات' }
+    { id: 'print', labelEn: 'Print', labelAr: 'المطبوعات' },
+    { id: 'brand', labelEn: 'Brand Identity', labelAr: 'الهوية البصرية' }
   ];
 
   const filteredProjects = projects.filter(p => p.category === selectedCategory);
