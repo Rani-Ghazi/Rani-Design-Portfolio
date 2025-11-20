@@ -40,6 +40,9 @@ import social27 from "@/assets/social-27.png";
 import brand1 from "@/assets/brand-1.png";
 import brand2 from "@/assets/brand-2.png";
 import brand3 from "@/assets/brand-3.png";
+import book1 from "@/assets/book-1.png";
+import book2 from "@/assets/book-2.png";
+import book3 from "@/assets/book-3.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -91,27 +94,27 @@ const Index = () => {
 
   const projects = [
     {
-      image: project2,
-      title: "Social Media Graphics",
-      titleAr: "تصميم منشورات التواصل الاجتماعي",
-      description: "Engaging visual content",
-      descriptionAr: "محتوى بصري جذاب",
+      image: book1,
+      title: "Atlas of the Solar System",
+      titleAr: "أطلس المجموعة الشمسية",
+      description: "Educational astronomy book cover with cosmic design",
+      descriptionAr: "غلاف كتاب تعليمي علم الفلك بتصميم كوني",
       category: "print"
     },
     {
-      image: project3,
-      title: "Packaging Design",
-      titleAr: "تصميم العبوات",
-      description: "Elegant product packaging",
-      descriptionAr: "تغليف أنيق للمنتجات",
+      image: book2,
+      title: "Chemistry Reference Book",
+      titleAr: "كتاب مرجع الكيمياء",
+      description: "Scientific textbook with elegant traditional design",
+      descriptionAr: "كتاب علمي مدرسي بتصميم تقليدي أنيق",
       category: "print"
     },
     {
-      image: project4,
-      title: "Poster Design",
-      titleAr: "تصميم الملصقات",
-      description: "Bold creative posters",
-      descriptionAr: "ملصقات إبداعية جريئة",
+      image: book3,
+      title: "Life Skills Book",
+      titleAr: "كتاب المهارات الحياتية",
+      description: "Educational book with illustrated cultural scenes",
+      descriptionAr: "كتاب تعليمي بمشاهد ثقافية مصورة",
       category: "print"
     },
     {
