@@ -43,6 +43,9 @@ import brand3 from "@/assets/brand-3.png";
 import book1 from "@/assets/book-1.png";
 import book2 from "@/assets/book-2.png";
 import book3 from "@/assets/book-3.png";
+import businesscard1 from "@/assets/businesscard-1.png";
+import businesscard2 from "@/assets/businesscard-2.png";
+import businesscard3 from "@/assets/businesscard-3.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -115,6 +118,30 @@ const Index = () => {
       titleAr: "كتاب المهارات الحياتية",
       description: "Educational book with illustrated cultural scenes",
       descriptionAr: "كتاب تعليمي بمشاهد ثقافية مصورة",
+      category: "print"
+    },
+    {
+      image: businesscard1,
+      title: "Educational Flyer Design",
+      titleAr: "تصميم منشور تعليمي",
+      description: "Engaging A5 flyer for school activities and events",
+      descriptionAr: "منشور A5 جذاب للأنشطة والفعاليات المدرسية",
+      category: "print"
+    },
+    {
+      image: businesscard2,
+      title: "Healthcare Flyer",
+      titleAr: "منشور صحي",
+      description: "Pink-themed educational healthcare information flyer",
+      descriptionAr: "منشور معلومات صحية تعليمي بتصميم وردي",
+      category: "print"
+    },
+    {
+      image: businesscard3,
+      title: "Social Media Business Card",
+      titleAr: "بطاقة عمل وسائل التواصل",
+      description: "Modern contact card with QR codes and social media",
+      descriptionAr: "بطاقة تواصل عصرية مع رموز QR ووسائل التواصل",
       category: "print"
     },
     {
