@@ -46,6 +46,9 @@ import book3 from "@/assets/book-3.png";
 import businesscard1 from "@/assets/businesscard-1.png";
 import businesscard2 from "@/assets/businesscard-2.png";
 import businesscard3 from "@/assets/businesscard-3.png";
+import flyer4 from "@/assets/flyer-4.png";
+import flyer5 from "@/assets/flyer-5.png";
+import flyer6 from "@/assets/flyer-6.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -142,6 +145,30 @@ const Index = () => {
       titleAr: "بطاقة عمل وسائل التواصل",
       description: "Modern contact card with QR codes and social media",
       descriptionAr: "بطاقة تواصل عصرية مع رموز QR ووسائل التواصل",
+      category: "print"
+    },
+    {
+      image: flyer4,
+      title: "Student Guidance Flyer",
+      titleAr: "منشور إرشاد الطلاب",
+      description: "Educational A5 flyer for student support and guidance",
+      descriptionAr: "منشور A5 تعليمي لدعم وإرشاد الطلاب",
+      category: "print"
+    },
+    {
+      image: flyer5,
+      title: "Health Awareness Flyer",
+      titleAr: "منشور توعية صحية",
+      description: "Pink healthcare educational information flyer",
+      descriptionAr: "منشور معلومات صحية تعليمي بتصميم وردي",
+      category: "print"
+    },
+    {
+      image: flyer6,
+      title: "Contact & QR Code Card",
+      titleAr: "بطاقة التواصل ورموز QR",
+      description: "Business contact card with social media QR codes",
+      descriptionAr: "بطاقة تواصل تجارية مع رموز QR لوسائل التواصل",
       category: "print"
     },
     {
