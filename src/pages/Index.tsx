@@ -2,7 +2,14 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, Palette, Package, Sparkles, Instagram } from "lucide-react";
+import { Mail, Phone, Instagram, Sparkles } from "lucide-react";
+import visualIdentityIcon from "@/assets/icons/visual-identity.png";
+import booksPrintIcon from "@/assets/icons/books-print.png";
+import advertisingMarketingIcon from "@/assets/icons/advertising-marketing.png";
+import cardsSchoolIcon from "@/assets/icons/cards-school.png";
+import packagingIcon from "@/assets/icons/packaging.png";
+import photoEnhancementIcon from "@/assets/icons/photo-enhancement.png";
+import otherServicesIcon from "@/assets/icons/other-services.png";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { PortfolioModal } from "@/components/PortfolioModal";
@@ -423,7 +430,7 @@ const Index = () => {
 
   const services = [
     {
-      icon: Palette,
+      icon: visualIdentityIcon,
       title: "Visual Identity & Logos",
       titleAr: "هوية بصرية وشعارات",
       description: "Building modern, clear identities that reflect your brand's values and present it professionally.",
@@ -437,42 +444,42 @@ const Index = () => {
       descriptionAr: "بوستات وإعلانات جذابة تنقل رسالتك فورًا وتزيد تفاعل جمهورك."
     },
     {
-      icon: Package,
+      icon: booksPrintIcon,
       title: "Books & Print Design",
       titleAr: "تصميم الكتب والمطبوعات",
       description: "School books, children's books, covers, flyers, brochures, reports, booklets, and more.",
       descriptionAr: "كتب مدرسية، كتب أطفال، أغلفة، فلايرات، بروشورات، تقارير، مطويات وغيرها."
     },
     {
-      icon: Sparkles,
+      icon: advertisingMarketingIcon,
       title: "Advertising & Marketing Design",
       titleAr: "تصميم الإعلانات والتسويق",
       description: "Posters, roll-ups, brochures, presentations—everything you need to showcase your project at its best.",
       descriptionAr: "ملصقات، رول أب، كتيبات تعريفية، عروض تقديمية—كل ما تحتاجه ليظهر مشروعك بأفضل صورة."
     },
     {
-      icon: Palette,
+      icon: cardsSchoolIcon,
       title: "Cards & School Materials",
       titleAr: "تصميم البطاقات ومنشورات المدارس",
       description: "Educational publications, contact cards, guidance posters, health flyers.",
       descriptionAr: "منشورات تعليمية، بطاقات تواصل، ملصقات إرشادية، منشورات صحية."
     },
     {
-      icon: Package,
+      icon: packagingIcon,
       title: "Packaging Design",
       titleAr: "تصميم التغليف والعبوات",
       description: "Professional packaging that highlights your product and enhances its appeal on the shelf.",
       descriptionAr: "تغليف احترافي يُبرز منتجك ويرفع من جاذبيته على الرف."
     },
     {
-      icon: Sparkles,
+      icon: photoEnhancementIcon,
       title: "Photo Enhancement & Product Display",
       titleAr: "تحسين الصور وعرض المنتجات",
       description: "Professional image processing and mockups to showcase your products with higher appeal.",
       descriptionAr: "معالجة صور احترافية وموك أب لعرض منتجاتك بجاذبية أعلى."
     },
     {
-      icon: Sparkles,
+      icon: otherServicesIcon,
       title: "Other Graphic Services on Request",
       titleAr: "خدمات غرافيك أخرى عند الطلب",
       description: "Because the design field is vast, I offer flexible solutions based on your project's needs.",
@@ -829,7 +836,11 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
                 <div className="space-y-6 relative z-10">
                   <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-medium">
-                    <service.icon className="w-8 h-8 text-primary-foreground transition-transform duration-500 group-hover:scale-110" />
+                    {typeof service.icon === 'string' ? (
+                      <img src={service.icon} alt="" className="w-8 h-8 transition-transform duration-500 group-hover:scale-110" style={{ filter: 'brightness(0) invert(1)' }} />
+                    ) : (
+                      <service.icon className="w-8 h-8 text-primary-foreground transition-transform duration-500 group-hover:scale-110" />
+                    )}
                   </div>
                   <h4 className="text-2xl md:text-3xl font-display font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {language === 'en' ? service.title : service.titleAr}
