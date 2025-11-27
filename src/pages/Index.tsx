@@ -622,6 +622,8 @@ const Index = () => {
                   <img 
                     src={raniPortrait} 
                     alt={language === 'en' ? 'Rani - Visual Identity Designer' : 'راني - مصمم هويات بصرية'}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay gradient on hover */}
@@ -767,6 +769,8 @@ const Index = () => {
                   <img 
                     src={project.image} 
                     alt={language === 'en' ? project.title : project.titleAr}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-2"
                   />
                   {/* Gradient overlay on hover */}
@@ -837,7 +841,7 @@ const Index = () => {
                 <div className="space-y-6 relative z-10">
                   <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-medium">
                     {typeof service.icon === 'string' ? (
-                      <img src={service.icon} alt="" className="w-8 h-8 transition-transform duration-500 group-hover:scale-110" style={{ filter: 'brightness(0) invert(1)' }} />
+                      <img src={service.icon} alt="" loading="lazy" decoding="async" className="w-8 h-8 transition-transform duration-500 group-hover:scale-110" style={{ filter: 'brightness(0) invert(1)' }} />
                     ) : (
                       <service.icon className="w-8 h-8 text-primary-foreground transition-transform duration-500 group-hover:scale-110" />
                     )}
