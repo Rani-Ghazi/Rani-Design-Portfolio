@@ -424,45 +424,59 @@ const Index = () => {
   const services = [
     {
       icon: Palette,
-      title: "Complete Brand Identity",
-      titleAr: "الهوية البصرية الشاملة",
-      description: "From logo to full brand guidelines—create instant recognition and lasting trust. Your brand, built to lead in the Gulf market.",
-      descriptionAr: "من الشعار إلى الدليل الكامل—تميز فوري وثقة دائمة. علامتك، مهيأة للريادة في السوق الخليجي."
+      title: "Visual Identity & Logos",
+      titleAr: "هوية بصرية وشعارات",
+      description: "Building modern, clear identities that reflect your brand's values and present it professionally.",
+      descriptionAr: "بناء هويات حديثة واضحة تعكس قيم علامتك وتُظهرها بمظهر احترافي."
     },
     {
       icon: Instagram,
       title: "Social Media Design",
-      titleAr: "تصميم محتوى التواصل الاجتماعي",
-      description: "Stop scrolling, start connecting. Designs that capture eyes, speak your brand language, and drive real engagement.",
-      descriptionAr: "أوقف التمرير، ابدأ التواصل. تصاميم تلفت الأنظار، تتحدث بلسان علامتك، وتقود إلى تفاعل حقيقي."
+      titleAr: "تصميم السوشيال ميديا",
+      description: "Engaging posts and ads that convey your message instantly and boost your audience interaction.",
+      descriptionAr: "بوستات وإعلانات جذابة تنقل رسالتك فورًا وتزيد تفاعل جمهورك."
     },
     {
       icon: Package,
-      title: "Premium Packaging",
-      titleAr: "تصميم العبوات والتغليف الفاخر",
-      description: "Your product's first impression is your first sale opportunity. Premium, shelf-ready designs that reflect quality and meet market taste.",
-      descriptionAr: "واجهة منتجك هي فرصتك الأولى للبيع. تصاميم راقية وجاهزة للأرفف تعكس جودة منتجك وتفهم ذوق جمهورك."
+      title: "Books & Print Design",
+      titleAr: "تصميم الكتب والمطبوعات",
+      description: "School books, children's books, covers, flyers, brochures, reports, booklets, and more.",
+      descriptionAr: "كتب مدرسية، كتب أطفال، أغلفة، فلايرات، بروشورات، تقارير، مطويات وغيرها."
     },
     {
       icon: Sparkles,
-      title: "Product Retouching",
-      titleAr: "تحسين وعرض المنتجات",
-      description: "Transform ordinary products into premium presentations. Professional retouching for e-commerce, retail, and marketing—making modest quality look luxurious.",
-      descriptionAr: "نحول منتجاتك العادية إلى منتجات فاخرة. تحسين احترافي للصور (حتى المتواضعة) لتظهر في أفضل شكل مرتب وفاخر."
+      title: "Advertising & Marketing Design",
+      titleAr: "تصميم الإعلانات والتسويق",
+      description: "Posters, roll-ups, brochures, presentations—everything you need to showcase your project at its best.",
+      descriptionAr: "ملصقات، رول أب، كتيبات تعريفية، عروض تقديمية—كل ما تحتاجه ليظهر مشروعك بأفضل صورة."
     },
     {
       icon: Palette,
-      title: "Print & Marketing Materials",
-      titleAr: "حلول المطبوعات والتسويق المادي",
-      description: "Make your brand tangible. Creative stickers, business cards, flyers—everything you need for physical presence with unmatched print quality.",
-      descriptionAr: "لنجعل علامتك ملموسة. من الاستيكرات الإبداعية إلى المطبوعات الاحترافية (بطاقات عمل، فلايرات) بجودة طباعة لا تُضاهى."
+      title: "Cards & School Materials",
+      titleAr: "تصميم البطاقات ومنشورات المدارس",
+      description: "Educational publications, contact cards, guidance posters, health flyers.",
+      descriptionAr: "منشورات تعليمية، بطاقات تواصل، ملصقات إرشادية، منشورات صحية."
+    },
+    {
+      icon: Package,
+      title: "Packaging Design",
+      titleAr: "تصميم التغليف والعبوات",
+      description: "Professional packaging that highlights your product and enhances its appeal on the shelf.",
+      descriptionAr: "تغليف احترافي يُبرز منتجك ويرفع من جاذبيته على الرف."
     },
     {
       icon: Sparkles,
-      title: "Strategic Creative Direction",
-      titleAr: "التوجيه الإبداعي والاستراتيجي",
-      description: "One unified message, across every platform. Strategic direction that ensures brand consistency and amplifies your visual impact everywhere.",
-      descriptionAr: "رسالة موحدة، في كل منصة. توجيه استراتيجي يضمن تماسك صورة علامتك ويضاعف تأثيرها البصري عبر جميع قنوات التواصل."
+      title: "Photo Enhancement & Product Display",
+      titleAr: "تحسين الصور وعرض المنتجات",
+      description: "Professional image processing and mockups to showcase your products with higher appeal.",
+      descriptionAr: "معالجة صور احترافية وموك أب لعرض منتجاتك بجاذبية أعلى."
+    },
+    {
+      icon: Sparkles,
+      title: "Other Graphic Services on Request",
+      titleAr: "خدمات غرافيك أخرى عند الطلب",
+      description: "Because the design field is vast, I offer flexible solutions based on your project's needs.",
+      descriptionAr: "لأن مجال التصميم واسع، أقدم لك حلولًا مرنة حسب احتياج مشروعك."
     }
   ];
 
@@ -621,20 +635,20 @@ const Index = () => {
               </h2>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-medium">
                 {language === 'en' 
-                  ? "I'm Rani—a visual identity designer specialized in the Omani and Gulf market. I don't just design logos, I craft brands that dominate today's competitive landscape."
-                  : "أنا راني—مصمم هويات بصرية متخصص في السوق العماني والخليجي. لا أصمم مجرد شعارات، بل أصنع علامات تجارية تتصدر المشهد التنافسي اليوم."
+                  ? "I'm Rani—an independent graphic designer specializing in innovative design solutions that meet the needs of Gulf projects across various fields."
+                  : "أنا راني—مصمم غرافيك مستقل متخصص في ابتكار حلول تصميم تلبي احتياجات المشاريع الخليجية بمختلف مجالاتها."
                 }
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-medium">
                 {language === 'en' 
-                  ? "Whether you're launching a pioneering project or refreshing an established brand, I deliver clarity, confidence, and visual impact—designed specifically to resonate with your audience."
-                  : "سواء كنت تطلق مشروعًا رائدًا أو تجدد علامة قائمة، أقدم لك وضوحًا، ثقة، وتأثيرًا بصريًا مصممًا خصيصًا ليتردد صداه لدى جمهورك."
+                  ? "I don't offer ordinary design, but create professional visuals that carry a clear message and leave a strong impression on your audience."
+                  : "لا أقدّم تصميماً عادياً، بل أبتكر مرئيات احترافية تحمل رسالة واضحة وتترك انطباعًا قويًا لدى جمهورك."
                 }
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground font-medium">
                 {language === 'en' 
-                  ? "I work with ambitious startups, local retailers and markets, and specialized service providers."
-                  : "أتعامل مع الشركات الناشئة الطموحة، تجار التجزئة والأسواق المحلية، ومقدمي الخدمات المتخصصين."
+                  ? "I work with: Startups • Local Merchants • Educational Institutions • Service Providers • Personal & Community Projects"
+                  : "أعمل مع: الشركات الناشئة • التجار المحليين • المؤسسات التعليمية • مقدمي الخدمات • المشاريع الشخصية والمجتمعية"
                 }
               </p>
               
@@ -666,11 +680,11 @@ const Index = () => {
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-bold text-base text-primary">{language === 'en' ? 'Why Gulf-Focused?' : 'لماذا التركيز على الخليج؟'}</h4>
+                  <h4 className="font-bold text-base text-primary">{language === 'en' ? 'Why Design for the Gulf Market?' : 'لماذا التصميم للسوق الخليجي؟'}</h4>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {language === 'en'
-                      ? "Because I believe successful design here requires cultural insight that goes beyond technical skill. I know what touches our audience's heart and mind."
-                      : 'لأنني أؤمن أن التصميم الناجح هنا يتطلب بصيرة ثقافية لا تكتفي بالمهارة التقنية. أعرف ما يلامس قلب جمهورنا وعقله.'
+                      ? "Because success in design here depends on deep visual and cultural understanding. I know what suits the Gulf audience's taste, and how to make your message stand out with clarity and elegance."
+                      : 'لأن نجاح التصميم هنا يعتمد على فهم بصري وثقافي عميق. أعرف ما يناسب ذوق الجمهور الخليجي، وكيف نجعل رسالتك تبرز بوضوح وأناقة.'
                     }
                   </p>
                 </div>
