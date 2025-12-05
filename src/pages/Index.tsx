@@ -59,6 +59,9 @@ import flyer6 from "@/assets/flyer-6.png";
 import canvas1 from "@/assets/canvas-1.png";
 import canvas2 from "@/assets/canvas-2.png";
 import canvas3 from "@/assets/canvas-3.png";
+import coupon1 from "@/assets/coupon-1.png";
+import coupon2 from "@/assets/coupon-2.png";
+import coupon3 from "@/assets/coupon-3.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -203,6 +206,30 @@ const Index = () => {
       titleAr: "لوحة كانفاس يوم الصحة العالمي",
       description: "Healthcare awareness canvas print with modern design",
       descriptionAr: "لوحة كانفاس توعوية صحية بتصميم عصري",
+      category: "print"
+    },
+    {
+      image: coupon1,
+      title: "Ice Kitchen Coupon Card",
+      titleAr: "بطاقة كوبون آيس كيتشن",
+      description: "Fresh citrus-themed loyalty card for juice shop",
+      descriptionAr: "بطاقة ولاء بتصميم حمضيات منعش لمحل عصائر",
+      category: "print"
+    },
+    {
+      image: coupon2,
+      title: "Nutella Bar Loyalty Card",
+      titleAr: "بطاقة ولاء نوتيلا بار",
+      description: "Chocolate-themed loyalty card with drip design",
+      descriptionAr: "بطاقة ولاء بتصميم شوكولاتة مميز",
+      category: "print"
+    },
+    {
+      image: coupon3,
+      title: "Premium Loyalty Card",
+      titleAr: "بطاقة ولاء فاخرة",
+      description: "Elegant gold and black luxury loyalty card design",
+      descriptionAr: "تصميم بطاقة ولاء فاخرة بالذهبي والأسود",
       category: "print"
     },
     {
