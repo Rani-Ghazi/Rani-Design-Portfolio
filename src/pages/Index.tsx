@@ -56,6 +56,9 @@ import businesscard3 from "@/assets/businesscard-3.png";
 import flyer4 from "@/assets/flyer-4.png";
 import flyer5 from "@/assets/flyer-5.png";
 import flyer6 from "@/assets/flyer-6.png";
+import canvas1 from "@/assets/canvas-1.png";
+import canvas2 from "@/assets/canvas-2.png";
+import canvas3 from "@/assets/canvas-3.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -176,6 +179,30 @@ const Index = () => {
       titleAr: "بطاقة التواصل ورموز QR",
       description: "Business contact card with social media QR codes",
       descriptionAr: "بطاقة تواصل تجارية مع رموز QR لوسائل التواصل",
+      category: "print"
+    },
+    {
+      image: canvas1,
+      title: "Floral Canvas Print",
+      titleAr: "لوحة كانفاس زهرية",
+      description: "Elegant canvas print with floral frame and Arabic calligraphy",
+      descriptionAr: "لوحة كانفاس أنيقة بإطار زهري وخط عربي",
+      category: "print"
+    },
+    {
+      image: canvas2,
+      title: "Wedding Invitation Canvas",
+      titleAr: "لوحة كانفاس دعوة زفاف",
+      description: "Romantic wedding invitation canvas with botanical design",
+      descriptionAr: "لوحة كانفاس دعوة زفاف رومانسية بتصميم نباتي",
+      category: "print"
+    },
+    {
+      image: canvas3,
+      title: "World Health Day Canvas",
+      titleAr: "لوحة كانفاس يوم الصحة العالمي",
+      description: "Healthcare awareness canvas print with modern design",
+      descriptionAr: "لوحة كانفاس توعوية صحية بتصميم عصري",
       category: "print"
     },
     {
