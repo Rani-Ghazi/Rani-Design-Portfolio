@@ -65,6 +65,9 @@ import coupon3 from "@/assets/coupon-3.png";
 import certificate1 from "@/assets/certificate-1.png";
 import certificate2 from "@/assets/certificate-2.png";
 import certificate3 from "@/assets/certificate-3.png";
+import poster1 from "@/assets/poster-1.png";
+import poster2 from "@/assets/poster-2.png";
+import poster3 from "@/assets/poster-3.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -257,6 +260,30 @@ const Index = () => {
       titleAr: "شهادة نادي رياضي",
       description: "Colorful appreciation certificate for sports team",
       descriptionAr: "شهادة تقدير ملونة لفريق رياضي",
+      category: "print"
+    },
+    {
+      image: poster1,
+      title: "VR Future of Creativity Poster",
+      titleAr: "بوستر مستقبل الإبداع",
+      description: "Neon-styled technology poster with VR theme",
+      descriptionAr: "بوستر تقني بأسلوب النيون وتقنية الواقع الافتراضي",
+      category: "print"
+    },
+    {
+      image: poster2,
+      title: "Eye Health Awareness Poster",
+      titleAr: "بوستر توعوي عن صحة العين",
+      description: "Healthcare infographic poster for elderly eye care",
+      descriptionAr: "بوستر توعوي عن العناية بصحة عيون كبار السن",
+      category: "print"
+    },
+    {
+      image: poster3,
+      title: "Salalah Travel Poster",
+      titleAr: "بوستر سياحة صلالة",
+      description: "Travel advertising poster for Salalah tourism",
+      descriptionAr: "بوستر إعلاني للسياحة في صلالة",
       category: "print"
     },
     {
