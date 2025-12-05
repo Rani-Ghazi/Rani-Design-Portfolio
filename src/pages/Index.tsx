@@ -62,6 +62,9 @@ import canvas3 from "@/assets/canvas-3.png";
 import coupon1 from "@/assets/coupon-1.png";
 import coupon2 from "@/assets/coupon-2.png";
 import coupon3 from "@/assets/coupon-3.png";
+import certificate1 from "@/assets/certificate-1.png";
+import certificate2 from "@/assets/certificate-2.png";
+import certificate3 from "@/assets/certificate-3.png";
 import raniPortrait from "@/assets/rani-portrait.jpg";
 
 const Index = () => {
@@ -230,6 +233,30 @@ const Index = () => {
       titleAr: "بطاقة ولاء فاخرة",
       description: "Elegant gold and black luxury loyalty card design",
       descriptionAr: "تصميم بطاقة ولاء فاخرة بالذهبي والأسود",
+      category: "print"
+    },
+    {
+      image: certificate1,
+      title: "Hospital Appreciation Certificate",
+      titleAr: "شهادة تقدير مستشفى",
+      description: "Professional healthcare appreciation certificate design",
+      descriptionAr: "تصميم شهادة تقدير احترافية للقطاع الصحي",
+      category: "print"
+    },
+    {
+      image: certificate2,
+      title: "Event Invitation Certificate",
+      titleAr: "بطاقة دعوة حفل",
+      description: "Elegant Arabic invitation card with gold accents",
+      descriptionAr: "بطاقة دعوة أنيقة بلمسات ذهبية",
+      category: "print"
+    },
+    {
+      image: certificate3,
+      title: "Sports Club Certificate",
+      titleAr: "شهادة نادي رياضي",
+      description: "Colorful appreciation certificate for sports team",
+      descriptionAr: "شهادة تقدير ملونة لفريق رياضي",
       category: "print"
     },
     {
