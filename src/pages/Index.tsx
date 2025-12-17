@@ -13,6 +13,7 @@ import otherServicesIcon from "@/assets/icons/other-services.png";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { PortfolioModal } from "@/components/PortfolioModal";
+import { LazyImage } from "@/components/LazyImage";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -874,11 +875,9 @@ const Index = () => {
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="aspect-square overflow-hidden relative bg-muted">
-                  <img 
+                  <LazyImage 
                     src={project.image} 
                     alt={language === 'en' ? project.title : project.titleAr}
-                    loading="lazy"
-                    decoding="async"
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-125 group-hover:rotate-2"
                   />
                   {/* Gradient overlay on hover */}
